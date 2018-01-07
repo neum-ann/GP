@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+	GROUP CREATOR - Регистрация респондента
+
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+	{{ Error }}
+
+	<div class="subscribe__title">
+        РЕГИСТРАЦИЯ НОВОГО РЕСПОНДЕНТА
+    </div>
+    
+   	<div class="subscribe__button">
+        <form method='post' name='reg'>
+        	<p>Придумайте логин - {{ form.login }}</p>
+        	<p>Придумайте пароль: - {{ form.password }}</p>
+        	</br>
+        	<p>Адрес электронной почты: - {{ form.email }}</p>
+        	<p>Фамилия - {{ form.surname }}</p>
+        	<p>Имя - {{ form.name }}</p>
+        	</br>
+        	<p></p> 
+        	<input type="checkbox" name="soglasie" value="Согласие на обработку персональных данных" checked>Согласие на обработку персональных данных</p>
+			<input type='submit' value='Зарегистрироваться'>
+		</form>
+	</div>
+
+	<div class="subscribe__button-back">
+    	<a href="/main">
+    		<div class="subscribe__button-b">
+    			НАЗАД
+    		</div>
+    	</a>
+   	</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+Админ
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block header %}
+
+	{{ surname }} {{ name }} {{ middle_name }}
+
+{% endblock %}
+
+{% block content %}
+
+	{{ Error }}
+
+	<form method='post' name='reg'>
+		<input type='submit' value='Сгенерировать группы' name='generation'>	
+	</form>
+
+	<table>
+		<tr>
+			<td>
+				Сгенерированные группы
+			</td>
+			<td>
+				Оставшиеся респонденты
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table>
+					{% for i in data %}
+					<tr>
+						<td>
+							{{ i }}
+						</td>
+					</tr>
+					{% endfor %}
+				</table>				
+			</td>
+			<td>
+				<table>
+					{% for i in last %}
+					<tr>
+						<td>
+							{{ i }}
+						</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</td>
+		</tr>
+	</table>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

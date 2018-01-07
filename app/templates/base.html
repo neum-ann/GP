@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		
+		{% block head %}
+		{% endblock %}
+	
+	</head>
+	<body>
+		<header class="page--centered m25 p25 clearfix">
+		
+			<a href="/main">
+				<div class="header__menu fl_l">
+					<img src="{{ url_for('static', filename='list.png') }}">
+					<span class="header__menu-text">GROUP CREATOR</span>
+				</div>
+			</a>
+			<a onclick="show('block')">
+				<div class="header__user fl_r">
+					<img src="{{ url_for('static', filename='user_circle.png') }}">
+				</div>
+			</a>
+		
+		</header>
+
+		<div class='content'>
+			<div class="page--centered content">
+				<div class="subscribe">
+				
+					{% block content %}
+					{% endblock %}
+				
+				</div>
+			</div>
+		</div>
+
+		<footer class="page--centered p25 clearfix">
+        <div class="footer__menu fl_l">
+            <a class="footer__menu-link" href="/about_us">О НАС</a>
+            <a class="footer__menu-link" href="/instruction">ИНСТРУКЦИЯ</a>
+        </div>
+
+        <div class="footer__menu-follow fl_r">
+            <a href="https://github.com/neum-ann">GITHUB</a>
+        </div>
+
+        <div class="footer__menu-c">
+            <a href="https://t.me/neum_ann"><span class="footer__menu-c-year">&copy;2018 </span>NEUMANN A.</a>
+        </div>
+    </footer>
+	
+	</body>
+</html>

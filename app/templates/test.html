@@ -1,0 +1,362 @@
+{% extends "base.html" %}
+
+{% block title %}
+	
+	Тест
+
+{% endblock %}
+
+{% block content %}
+
+	{{ Error }}
+	
+	<form method='post' name='reg'>
+		<table>
+			<tr>
+				<td>
+					<table>
+						{% for i in arr_A %}
+						<tr>
+							<td>
+								{{ i }}
+							</td>
+						</tr>
+						{% endfor %}
+					</table>
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td>
+								{{ Answ.answer1_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer2_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer3_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer4_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer5_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer6_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer7_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer8_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer9_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer10_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer11_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer12_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer13_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer14_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer15_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer16_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer17_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer18_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer19_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer20_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer21_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer22_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer23_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer24_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer25_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer26_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer27_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer28_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer29_A }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer30_A }}	
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td>
+								{{ Answ.answer1_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer2_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer3_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer4_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer5_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer6_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer7_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer8_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer9_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer10_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer11_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer12_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer13_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer14_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer15_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer16_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer17_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer18_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer19_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer20_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer21_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer22_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer23_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer24_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer25_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer26_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer27_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer28_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer29_B }}	
+							</td>
+						</tr>
+						<tr>
+							<td>
+								{{ Answ.answer30_B }}	
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table>
+						{% for i in arr_B %}
+						<tr>
+							<td>
+								{{ i }}
+							</td>
+						</tr>
+						{% endfor %}
+					</table>
+				</td>
+			</tr>
+		</table>
+		<input type='submit' value='Ответить'>
+	</form>
+
+	<div class="subscribe__button-back">
+        <a href="/main">
+        	<div class="subscribe__button-b">
+        		ОТМЕНИТЬ
+        	</div>
+        </a>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

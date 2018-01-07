@@ -1,0 +1,165 @@
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fl_l {
+	float: left;
+}
+
+.fl_r {
+	float: right;
+}
+
+.p25 {
+	padding: 25px;
+}
+
+
+.page--centered {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/***/
+
+header {
+	margin: 10% 0;
+}
+
+.header__menu > img {
+	margin-left: 25px;
+	margin-right: 10px;
+}
+
+.header__user {
+	margin-left: 15px;
+	margin-right: 25px;
+}
+
+
+/***/
+
+.subscribe {
+	margin: 0 auto;
+	width: 710px;
+	padding: 60px 100px;
+	background-color: #EFF5FD;
+}
+
+.subscribe__title {
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.subscribe__description {
+	text-align: center;
+	font-size: 1.1em;
+	color: #999;
+	margin-bottom: 30px;
+}
+
+.subscribe__button {
+	margin: 5% 22%;
+}
+.subscribe__button-back {
+	margin: 0 36%;
+}
+
+.subscribe__button-b {
+	background-color: #20a5ff;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 0 auto;
+	width: 155px;
+	text-align: center;
+	display: inline-block;
+}
+
+/***/
+
+footer {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.footer__menu {
+	margin-left: 25px;
+}
+
+.footer__menu-link {
+	margin-right: 35px;
+}
+
+.footer__menu-follow {
+	margin-right: 25px;
+}
+
+.footer__menu-c {
+	margin:0 auto;
+	width: 135px;
+}
+
+.footer__menu-c-year {
+	color: #999;
+}
+
+/** Мышиные стили **/
+#wrap{
+	display: none;
+	opacity: 0.8;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 16px;
+	background-color: rgba(1, 1, 1, 0.725);
+	z-index: 100;
+	overflow: auto;
+}
+ 
+#window{
+	width: 400px;
+	height: 400px;
+	margin: 50px auto;
+	display: none;
+	background: #fff;
+	z-index: 200;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 16px;
+}
+ 
+.close{
+	margin-left: 364px;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+.content div{}
+.content p{}
+.content a{}
+.content table{}
+.content tr{}
+.content td{height: 115px;}
