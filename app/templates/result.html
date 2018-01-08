@@ -2,22 +2,32 @@
 
 {% block title %}
 
-    GROUP CREATOR - Результат
+    Результат
+
+{% endblock %}
+
+{% block header %}
+    
+    <div class='error'>
+        {{ Error }}
+    </div>
 
 {% endblock %}
 
 {% block content %}
 
     <div class="subscribe__description">
-        <p>Ваш результат.</p>
-        </br>
-        <p>За подробностями обращайтесь к педагогу. Спасибо!</p>
+        <div class='msf_vik'>
+            <p>Ваш результат.</p>
+            <p>{{ txt_result }}</p>
+            <p>За подробностями обращайтесь к педагогу. Спасибо!</p>
+        </div>
     </div>
     
     <div class="subscribe__button">
         <a href="/main">
             <div class="subscribe__button-b">
-                НА ГЛАВНУЮ
+                <span class='txt_up'>на главную</span>
             </div>
         </a>
     </div>

@@ -24,6 +24,7 @@ from app.algorithm.step2 import sorted_group
 
 # Глобальные переменные
 idd=0
+result=''
 
 # Возвращает базовый шаблон
 @app.route('/')
@@ -87,13 +88,13 @@ def main():
                 if select.role=='resp':
                     idd=select.id
 
-                    return redirect('/test')
+                    return redirect('http://localhost:5000/test')
 
                 # Если заходит админинстратор
                 elif select.role=='admin':
                     idd=select.id
 
-                    return redirect('/admin')
+                    return redirect('http://localhost:5000/admin')
 
                 # Если роль неопознать
                 else:
@@ -281,7 +282,7 @@ def reg_resp():
                         select=User.query.filter_by(login=login).first()
                         idd=select.id
 
-                        return redirect('/start_test')
+                        return redirect('http://localhost:5000/start_test')
 
                     # Если такой логин уже существует
                     else:
@@ -311,7 +312,7 @@ def reg_resp():
                 select=User.query.filter_by(login=login).first()
                 idd=select.id
 
-                return redirect('/start_test')
+                return redirect('http://localhost:5000/start_test')
 
         # Если не согласен на обработку персональных данных
         else:
@@ -455,7 +456,7 @@ def reg_admin():
                     select=User.query.filter_by(login=login).first()
                     idd=select.id
 
-                    return redirect('/admin')
+                    return redirect('http://localhost:5000/admin')
 
                 # Если логин уже есть
                 else:
@@ -485,7 +486,7 @@ def reg_admin():
             select=User.query.filter_by(login=login).first()
             idd=select.id
 
-            return redirect('/admin')
+            return redirect('http://localhost:5000/admin')     
 
     # Создание страницы
     return render_template('reg_admin.html',
@@ -502,7 +503,7 @@ def start_test():
 # Тест для респондента
 @app.route('/test', methods=['GET','POST'])
 def test():
-    global idd
+    global idd, result
 
     # Создание формы для сбора ответов
     form_answ=Answer(request.form)
@@ -593,6 +594,11 @@ def test():
         db.session.add(R)
         db.session.commit()
 
+        # Сохранение характера в таблице пользователей
+        select=User.query.filter_by(id=idd).first()
+        select.result=more_count
+        db.session.commit()
+
         # Объявление формы
         form_login=Login(request.form)
 
@@ -602,8 +608,11 @@ def test():
             # Error='Спасибо за прохождение тэста!'
         # )
 
+        # Передача результата на страницу с результатом
+        result=more_count
+
         # После ответа результат
-        return render_template('result.html')
+        return redirect('http://localhost:5000/result')
 
     # Создание массиво для сбора вопросов из бд
     arr_question_A=[]
@@ -633,8 +642,38 @@ def test():
 # Результат тестирования
 @app.route('/result')
 def result():
-    
-    return render_template('result.html')
+    global result
+
+    # Переводим результат в удобный для пользователя
+    txt_result=''
+
+    if result=='prisposoblenie':
+        txt_result='Приспособление'
+
+    elif result=='sopernichestvo':
+        txt_result='Соперничество'
+
+    elif result=='sotrudnichestvo':
+        txt_result='Сотрудничество'
+
+    elif result=='kompromis':
+        txt_result='Компромис'
+
+    elif result=='izbeganie':
+        txt_result='Избегание'
+
+    # Если ни один из результатовне подошёл
+    else:
+
+        # Вывод ошибки
+        return render_template('result.html',
+            Error='Ошибка! Ни один из результатов не подходит, сообщите нам об этой ошибке.'
+            )
+
+    # Создание страницы
+    return render_template('result.html',
+        txt_result=txt_result
+        )
 
 # Страница админинстратора
 @app.route('/admin', methods=['GET','POST'])
@@ -690,8 +729,8 @@ def admin():
                     Error='Респондентов нет.'
                 )
 
-            # Если не респондентов
-            if len(arr_people)==0:
+            # Если нет респондентов
+            if len(arr_people)<5:
 
                 # выборка данных админа
                 select=User.query.filter_by(id=idd).first()
@@ -702,7 +741,7 @@ def admin():
                     middle_name=select.middle_name,
                     data='.',
                     last='.',
-                    Error='Респондентов нет.'
+                    Error='Респондентов меньше 5.'
                 )
 
             # создание списков всех характеров
@@ -743,19 +782,19 @@ def admin():
                         arr_prispososoblenie.append(select.count_prispososoblenie)
 
                 # Если запрос пустой
-                else:
-                    
-                    # выборка данных админа
-                    select=User.query.filter_by(id=idd).first()
+                # else:
 
-                    return render_template('admin.html',
-                        surname=select.surname,
-                        name=select.name,
-                        middle_name=select.middle_name,
-                        data='.',
-                        last='.',
-                        Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
-                    )
+                    # выборка данных админа
+                    # select=User.query.filter_by(id=idd).first()
+
+                    # return render_template('admin.html',
+                    #     surname=select.surname,
+                    #     name=select.name,
+                    #     middle_name=select.middle_name,
+                    #     data='.',
+                    #     last='.',
+                    #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
+                    # )
 
             # сортировка характеров, что бы вначале списка был самый большой балл
             arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
@@ -777,7 +816,7 @@ def admin():
             if max_people>int(len(arr_sotrudnichestvo)/2):
                 if len(arr_sotrudnichestvo)!=0:
 
-                    max_people=int(len(arr_sotrudnichestvo/2))
+                    max_people=int(len(arr_sotrudnichestvo)/2)
 
                 else:
                     max_people=0
@@ -918,7 +957,7 @@ def admin():
                 data.append('Группа №'+str(i+1))
                 for j in arr_group[i]:
                     select=User.query.filter_by(id=int(j)).first()
-                    data.append(select.surname+' '+select.name+' '+select.middle_name)
+                    data.append(select.surname+' '+select.name+' Психотип: '+select.result)
 
             # Добавляем данные о тех, кто остался нерапспределённым
             last=[]
@@ -941,7 +980,7 @@ def admin():
             new_last=[]
             for i in last:
                 select=User.query.filter_by(id=int(i)).first()
-                new_last.append(select.surname+' '+select.name+' '+select.middle_name)
+                new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
 
             # теперь нужны только персональные данные
             last=new_last

@@ -2,34 +2,33 @@
 
 {% block title %}
 
-	GROUP CREATOR - Регистрация респондента
+	Регистрация респондента
 
-{% endblock %}
-
-{% block head %}
 {% endblock %}
 
 {% block header %}
+	
+	<div class='error'>
+		{{ Error }}
+	</div>
+
 {% endblock %}
 
 {% block content %}
 
-	{{ Error }}
-
 	<div class="subscribe__title">
-        РЕГИСТРАЦИЯ НОВОГО РЕСПОНДЕНТА
+        <span class='txt_up'>регистрация нового респондента</span>
     </div>
     
    	<div class="subscribe__button">
         <form method='post' name='reg'>
-        	<p>Придумайте логин - {{ form.login }}</p>
-        	<p>Придумайте пароль: - {{ form.password }}</p>
-        	</br>
-        	<p>Адрес электронной почты: - {{ form.email }}</p>
-        	<p>Фамилия - {{ form.surname }}</p>
-        	<p>Имя - {{ form.name }}</p>
-        	</br>
-        	<p></p> 
+        	<div class='msf_vik'>
+	        	<p>Придумайте логин - {{ form.login }}</p>
+	        	<p>Придумайте пароль: - {{ form.password }}</p>
+	        	<p>Адрес электронной почты: - {{ form.email }}</p>
+	        	<p>Фамилия - {{ form.surname }}</p>
+	        	<p>Имя - {{ form.name }}</p> 
+        	</div>
         	<input type="checkbox" name="soglasie" value="Согласие на обработку персональных данных" checked>Согласие на обработку персональных данных</p>
 			<input type='submit' value='Зарегистрироваться'>
 		</form>
@@ -38,12 +37,9 @@
 	<div class="subscribe__button-back">
     	<a href="/main">
     		<div class="subscribe__button-b">
-    			НАЗАД
+    			<span class='txt_up'>назад</span>
     		</div>
     	</a>
    	</div>
 
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

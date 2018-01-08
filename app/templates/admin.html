@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 
 {% block title %}
-Админ
-{% endblock %}
 
-{% block head %}
+	Админ
+
 {% endblock %}
 
 {% block header %}
+	
+	<div class='error'>
+		{{ Error }}
+	</div>
 
 	{{ surname }} {{ name }} {{ middle_name }}
 
 {% endblock %}
 
 {% block content %}
-
-	{{ Error }}
-
+	
 	<form method='post' name='reg'>
 		<input type='submit' value='Сгенерировать группы' name='generation'>	
 	</form>
@@ -56,7 +57,4 @@
 		</tr>
 	</table>
 
-{% endblock %}
-
-{% block footer %}
 {% endblock %}
