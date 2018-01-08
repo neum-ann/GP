@@ -88,13 +88,13 @@ def main():
                 if select.role=='resp':
                     idd=select.id
 
-                    return redirect('http://localhost:5000/test')
+                    return redirect('/test')
 
                 # Если заходит админинстратор
                 elif select.role=='admin':
                     idd=select.id
 
-                    return redirect('http://localhost:5000/admin')
+                    return redirect('/admin')
 
                 # Если роль неопознать
                 else:
@@ -282,7 +282,7 @@ def reg_resp():
                         select=User.query.filter_by(login=login).first()
                         idd=select.id
 
-                        return redirect('http://localhost:5000/start_test')
+                        return redirect('/start_test')
 
                     # Если такой логин уже существует
                     else:
@@ -312,7 +312,7 @@ def reg_resp():
                 select=User.query.filter_by(login=login).first()
                 idd=select.id
 
-                return redirect('http://localhost:5000/start_test')
+                return redirect('/start_test')
 
         # Если не согласен на обработку персональных данных
         else:
@@ -456,7 +456,7 @@ def reg_admin():
                     select=User.query.filter_by(login=login).first()
                     idd=select.id
 
-                    return redirect('http://localhost:5000/admin')
+                    return redirect('/admin')
 
                 # Если логин уже есть
                 else:
@@ -486,7 +486,7 @@ def reg_admin():
             select=User.query.filter_by(login=login).first()
             idd=select.id
 
-            return redirect('http://localhost:5000/admin')     
+            return redirect('/admin')     
 
     # Создание страницы
     return render_template('reg_admin.html',
@@ -612,7 +612,7 @@ def test():
         result=more_count
 
         # После ответа результат
-        return redirect('http://localhost:5000/result')
+        return redirect('/result')
 
     # Создание массиво для сбора вопросов из бд
     arr_question_A=[]
