@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+	Создание групп вручную
+
+{% endblock %}
+
+{% block header %}
+	
+	<div class='error'>
+		{{ Error }}
+		{{ mesage }}
+	</div>
+
+	{{ surname }} {{ name }} {{ middle_name }}
+
+{% endblock %}
+
+{% block content %}
+	
+	<div class='zero_height'>
+		<table>
+			<tr>
+				<td>
+					Будующая группа:<br>
+					(Введите айди студента)
+				</td>
+				<td>
+					Нераспределённых респонденты:
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table>
+						<form method='post' name='reg'>
+							<tr>
+								<td>
+									1. {{ form.person_1 }}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									2. {{ form.person_2 }}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									3. {{ form.person_3 }}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									4. {{ form.person_4 }}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									5. {{ form.person_5 }}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='submit' value='Создать'>
+								</td>
+							</tr>
+						</form>
+					</table>
+				</td>
+				<td>
+					<table>
+						{% for i in arr_free_resp %}
+							<tr>
+								<td>
+									{{ i }}
+								</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="subscribe__button-back">
+        <a href="http://localhost:5000/admin">
+            <div class="subscribe__button-b">
+                <span class='txt_up'>назад</span>
+            </div>
+        </a>
+    </div>
+
+{% endblock %}
