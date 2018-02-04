@@ -2,7 +2,7 @@
 
 {% block title %}
 
-	GROUP CREATOR - Главная страница
+	Главная страница
 
 {% endblock %}
 
@@ -17,27 +17,32 @@
 
 {% endblock %}
 
+{% block header %}
+	
+	<div class='error'>
+		{{ Error }}
+	</div>
+
+{% endblock %}
+
 {% block content %}
 
-	{{ Error }}
-
 	<div class="subscribe__title">
-		GROUP CREATOR - Приложение для создания рекомендаций по формированию учебных групп
+		<p>GROUP CREATOR - Приложение для создания рекомендаций по формированию учебных групп</p>
 	</div>
 	
 	<div class="subscribe__button">
-		<a href="/reg_resp">
+		<a href="http://localhost:5000/reg_resp">
 			<div class="subscribe__button-b">
-				Я РЕСПОНДЕНТ
+				<span class='txt_up'>я респондент</span>
 			</div>
 		</a>
-		<a href="/reg_admin">
+		<a href="http://localhost:5000/reg_admin">
 			<div class="subscribe__button-b">
-				Я АДМИНИСТРАТОР
+				<span class='txt_up'>я админинстратор</span>
 			</div>
 		</a>
 	</div>
-
 
 	<!-- Всплывающие поле входа при клике на иконку справа -->
 	<div onclick="show('none')" id='wrap'></div>
