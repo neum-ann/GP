@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+	Просмотр созданных групп и нераспределённых респондентов
+
+{% endblock %}
+
+{% block content %}
+
+	<div class='zero_height'>
+		<table>
+			<tr>
+				<td>
+					Созданные группы:
+				</td>
+				<td>
+					Нераспределённые респонденты:
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table>
+						{% for i in arr_group %}
+							<tr>
+								<td>
+									{{ i }}
+								</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</td>
+				<td>
+					<table>
+						{% for i in arr_free_resp %}
+							<tr>
+								<td>
+									{{ i }}
+								</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="subscribe__button-back">
+        <a href="http://localhost:5000/admin">
+            <div class="subscribe__button-b">
+                <span class='txt_up'>назад</span>
+            </div>
+        </a>
+    </div>
+
+{% endblock %}
