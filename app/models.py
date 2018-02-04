@@ -15,6 +15,7 @@ class User(db.Model):
 	name=db.Column(db.String(64))
 	middle_name=db.Column(db.String(64))
 	role=db.Column(db.String(64))
+	result=db.Column(db.String(64))
 
 	def __repr__(self):
 		return '<User %r>' % (self.login)
@@ -40,6 +41,9 @@ class Results(db.Model):
 	count_izbeganie=db.Column(db.String(64))
 	count_prispososoblenie=db.Column(db.String(64))
 	more_count=db.Column(db.String(64))
+	delete=db.Column(db.String(64))
+	data=db.Column(db.String(64))
+	time=db.Column(db.Integer)
 
 	def __repr__(self):
 		return '<Results %r>' % (self.id)
