@@ -76,7 +76,7 @@ header {
 }
 
 .subscribe__button {
-	margin: 5% 22%;
+	margin: 5% 19%;
 }
 .subscribe__button-back {
 	margin: 0 36%;
@@ -88,7 +88,7 @@ header {
 	padding: 10px 20px;
 	border-radius: 5px;
 	margin: 0 auto;
-	width: 155px;
+	width: 165px;
 	text-align: center;
 	display: inline-block;
 }
@@ -163,3 +163,28 @@ footer {
 .content table{}
 .content tr{}
 .content td{height: 115px;}
+
+div.msf_vik {padding: 3px; margin:2px; border:0px;}
+div.msf_vik p{text-align: justify;}
+
+div.msf_vik h1{}
+div.msf_vik h2{}
+div.msf_vik h3{}
+
+div.msf_vik a,
+div.msf_vik a:link,
+div.msf_vik a:visited,
+
+div.msf_vik a:active{text-decoration:none; color: grey;}
+div.msf_vik a:hover{text-decoration:underline; color: blue;}
+
+div.msf_vik ul{margin-top: 1em; margin-left: 5px; text-align: left;}
+div.msf_vik ul li{padding-left: 5px; padding-top: 5px;}
+
+div.msf_vik ol{margin-top: 1em; margin-left: 5px; text-align: left;}
+div.msf_vik ol li{padding-left: 5px; padding-top: 5px;}
+
+.txt_up{text-transform: uppercase;}
+.special_ul{list-style-type: none;}
+.error{color: red; text-transform: uppercase; font-size: 22px; margin-bottom: 20px; text-align: center; font-weight: 800;}
+div.zero_height td{height: 0px;}

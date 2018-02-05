@@ -6,9 +6,15 @@
 
 {% endblock %}
 
-{% block content %}
+{% block header %}
+	
+	<div class='error'>
+		{{ Error }}
+	</div>
 
-	{{ Error }}
+{% endblock %}
+
+{% block content %}
 	
 	<form method='post' name='reg'>
 		<table>
@@ -349,14 +355,11 @@
 	</form>
 
 	<div class="subscribe__button-back">
-        <a href="/main">
+        <a href="http://localhost:5000/main">
         	<div class="subscribe__button-b">
-        		ОТМЕНИТЬ
+        		<span class='txt_up'>отменить</span>
         	</div>
         </a>
     </div>
 
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

@@ -91,6 +91,18 @@ class Answer(Form):
 	answer30_A=BooleanField('Ответ 30', validators=[DataRequired()])
 	answer30_B=BooleanField('Ответ 30', validators=[DataRequired()])
 
+# Форма для создания групп
+class Group_create(Form):
+	person_1=StringField('Первый участник группы', validators=[DataRequired()])
+	person_2=StringField('Второй участник группы', validators=[DataRequired()])
+	person_3=StringField('Третий участник группы', validators=[DataRequired()])
+	person_4=StringField('Четвёртный учатник группы', validators=[DataRequired()])
+	person_5=StringField('Пятый участник группы', validators=[DataRequired()])
+
+# Форма для сохранения конкретной группы
+class Save_this(Form):
+	number=StringField('Номер группы для сохранения', validators=[DataRequired()])
+
 # Действия если запускается именно этот файл
 if __name__=='__main__':
 	pass
