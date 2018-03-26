@@ -16,7 +16,8 @@
 
 {% block content %}
 	
-	<form method='post' name='reg'>
+	<!-- Чекбоксы -->
+<!-- 	<form method='post' name='reg'>
 		<table>
 			<tr>
 				<td>
@@ -352,10 +353,613 @@
 			</tr>
 		</table>
 		<input type='submit' value='Ответить'>
-	</form>
+	</form> -->
 
+	<!-- Радио вариант -->
+	<form method='post' name='reg'>
+		<div class='test'>
+			<table>
+				<tr>
+					<td>
+						{{ arr_A[0] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer1 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[0] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[1] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer2 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[1] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[2] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer3 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[2] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[3] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer4 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[3] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[4] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer5 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[4] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[5] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer6 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[5] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[6] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer7 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[6] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[7] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer8 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[7] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[8] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer9 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[8] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[9] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer10 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[9] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[10] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer11 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[10] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[11] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer12 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[11] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[12] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer13 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[12] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[13] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer14 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[13] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[14] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer15 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[14] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[15] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer16 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[15] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[16] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer17 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[16] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[17] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer18 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[17] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[18] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer19 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[18] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[19] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer20 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[19] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[20] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer21 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[20] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[21] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer22 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[21] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[22] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer23 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[22] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[23] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer24 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[23] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[24] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer25 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[24] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[25] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer26 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[25] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[26] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer27 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[26] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[27] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer28 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[27] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[28] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer29 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[28] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_A[29] }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ Answ.answer30 }}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{{ arr_B[29] }}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<input type='submit' value='Ответить'>
+	</form>
 	<div class="subscribe__button-back">
-        <a href="http://localhost:5000/main">
+        <a href="/main">
         	<div class="subscribe__button-b">
         		<span class='txt_up'>отменить</span>
         	</div>
