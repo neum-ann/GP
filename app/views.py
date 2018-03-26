@@ -143,13 +143,13 @@ def main():
                     # Если запрос пустой то он не выполнял тэст, тогда пусть выполняет
                     else:
                         
-                        return redirect('http://localhost:5000/test')
+                        return redirect('/test')
 
                 # Если заходит админинстратор
                 elif select.role=='admin':
                     idd=select.id
 
-                    return redirect('http://localhost:5000/admin')
+                    return redirect('/admin')
 
                 # Если роль неопознать
                 else:
@@ -422,7 +422,7 @@ def reg_resp():
                         select=User.query.filter_by(login=login).first()
                         idd=select.id
 
-                        return redirect('http://localhost:5000/start_test')
+                        return redirect('/start_test')
 
                     # Если такой логин уже существует
                     else:
@@ -452,7 +452,7 @@ def reg_resp():
                 select=User.query.filter_by(login=login).first()
                 idd=select.id
 
-                return redirect('http://localhost:5000/start_test')
+                return redirect('/start_test')
 
         # Если не согласен на обработку персональных данных
         else:
@@ -596,7 +596,7 @@ def reg_admin():
                     select=User.query.filter_by(login=login).first()
                     idd=select.id
 
-                    return redirect('http://localhost:5000/admin')
+                    return redirect('/admin')
 
                 # Если логин уже есть
                 else:
@@ -626,7 +626,7 @@ def reg_admin():
             select=User.query.filter_by(login=login).first()
             idd=select.id
 
-            return redirect('http://localhost:5000/admin')     
+            return redirect('/admin')     
 
     # Создание страницы
     return render_template('reg_admin.html',
@@ -766,7 +766,7 @@ def test():
         # )
 
         # После ответа результат
-        return redirect('http://localhost:5000/result')
+        return redirect('/result')
 
     # Создание массиво для сбора вопросов из бд
     arr_question_A=[]
@@ -1908,7 +1908,7 @@ def statistic():
     <body>
         <header class="page--centered m25 p25 clearfix">
         
-            <a href="http://localhost:5000/main">
+            <a href="/main">
                 <div class="header__menu fl_l">
                     <img src="../static/list.png">
                     <span class="header__menu-text"><span class='txt_up'>group creator</span></span>
@@ -1930,7 +1930,7 @@ def statistic():
     # Конец страницы после граффиков
     after_script='''
                     <div class="subscribe__button-back">
-                        <a href="http://localhost:5000/admin">
+                        <a href="/admin">
                             <div class="subscribe__button-b">
                                 <span class='txt_up'>назад</span>
                             </div>
@@ -1942,8 +1942,8 @@ def statistic():
 
     <footer class="page--centered p25 clearfix">
         <div class="footer__menu fl_l">
-            <a class="footer__menu-link" href="http://localhost:5000/about_us"><span class='txt_up'>о нас</span></a>
-            <a class="footer__menu-link" href="http://localhost:5000/instruction"><span class='txt_up'>инструкция</span></a>
+            <a class="footer__menu-link" href="/about_us"><span class='txt_up'>о нас</span></a>
+            <a class="footer__menu-link" href="/instruction"><span class='txt_up'>инструкция</span></a>
         </div>
 
         <div class="footer__menu-follow fl_r">
