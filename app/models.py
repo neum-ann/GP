@@ -57,6 +57,8 @@ class Group(db.Model):
 	person_3=db.Column(db.String(64))
 	person_4=db.Column(db.String(64))
 	person_5=db.Column(db.String(64))
+	person_6=db.Column(db.String(64))
+	person_7=db.Column(db.String(64))
 
 	def __repr__(self):
 		return '<Group %r>' % (self.id)

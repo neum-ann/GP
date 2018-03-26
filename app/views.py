@@ -1,4 +1,4 @@
-##!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Подключение модулей фласки
@@ -28,6 +28,7 @@ from app.algorithm.step2 import sorted_group
 # Глобальные переменные
 idd=0
 result=''
+for_percent=34/100
 start_time=0
 finish_time=0
 alldays=['2018-01-01', '2018-01-02', '2018-01-03', '2018-01-04', '2018-01-05', '2018-01-06', '2018-01-07', '2018-01-08', '2018-01-09', '2018-01-10', '2018-01-11', 
@@ -318,12 +319,13 @@ def reg_resp():
             index=0
             # Проходимся по каждому символу в строке
             while i<len(email):
+                word=''
+
                 # если встречаем собаку то
                 if email[i]=='@':
                     # объявляем переменные плюс за наличии собаки увеличиваем индекс
                     index+=1
                     i+=1
-                    word=''
 
                     # продолжае цикл
                     while i<len(email):
@@ -653,10 +655,284 @@ def test():
         # время окончания прохождения тэста
         finish_time=time.time()
 
-        # Сбор ответов
+        # Сбор ответов для чекбокса
+        # arr_answ=[]
+        # for i in request.form:
+        #     arr_answ.append(i)
+
+        # Сбор ответов для радио
         arr_answ=[]
-        for i in request.form:
-            arr_answ.append(i)  
+        ans1=form_answ.answer1.data
+        ans2=form_answ.answer2.data
+        ans3=form_answ.answer3.data
+        ans4=form_answ.answer4.data
+        ans5=form_answ.answer5.data
+        ans6=form_answ.answer6.data
+        ans7=form_answ.answer7.data
+        ans8=form_answ.answer8.data
+        ans9=form_answ.answer9.data
+        ans10=form_answ.answer10.data
+        ans11=form_answ.answer11.data
+        ans12=form_answ.answer1.data
+        ans13=form_answ.answer1.data
+        ans14=form_answ.answer1.data
+        ans15=form_answ.answer1.data
+        ans16=form_answ.answer1.data
+        ans17=form_answ.answer1.data
+        ans18=form_answ.answer1.data
+        ans19=form_answ.answer1.data
+        ans20=form_answ.answer1.data
+        ans21=form_answ.answer1.data
+        ans22=form_answ.answer1.data
+        ans23=form_answ.answer1.data
+        ans24=form_answ.answer1.data
+        ans25=form_answ.answer1.data
+        ans26=form_answ.answer1.data
+        ans27=form_answ.answer1.data
+        ans28=form_answ.answer1.data
+        ans29=form_answ.answer1.data
+        ans30=form_answ.answer1.data
+        
+        # А теперь иммитация чекбокса что бы код дальше не переделывать
+        # Если в 1 вопросе А
+        if ans1=='A':
+            arr_answ.append('answer1_A')
+
+        # Если в 1 вопросе B
+        elif ans1=='B':
+            arr_answ.append('answer1_B')
+
+        # Если в 2 вопросе А
+        if ans2=='A':
+            arr_answ.append('answer2_A')
+
+        # Если в 2 вопросе B
+        elif ans2=='B':
+            arr_answ.append('answer2_B')
+
+        # Если в 3 вопросе А
+        if ans3=='A':
+            arr_answ.append('answer3_A')
+
+        # Если в 3 вопросе B
+        elif ans3=='B':
+            arr_answ.append('answer3_B')
+
+        # Если в 4 вопросе А
+        if ans4=='A':
+            arr_answ.append('answer4_A')
+
+        # Если в 4 вопросе B
+        elif ans4=='B':
+            arr_answ.append('answer4_B')
+
+        # Если в 5 вопросе А
+        if ans5=='A':
+            arr_answ.append('answer5_A')
+
+        # Если в 5 вопросе B
+        elif ans5=='B':
+            arr_answ.append('answer5_B')
+
+        # Если в 6 вопросе А
+        if ans6=='A':
+            arr_answ.append('answer6_A')
+
+        # Если в 6 вопросе B
+        elif ans6=='B':
+            arr_answ.append('answer6_B')
+
+        # Если в 7 вопросе А
+        if ans7=='A':
+            arr_answ.append('answer7_A')
+
+        # Если в 7 вопросе B
+        elif ans7=='B':
+            arr_answ.append('answer7_B')
+
+        # Если в 8 вопросе А
+        if ans8=='A':
+            arr_answ.append('answer8_A')
+
+        # Если в 8 вопросе B
+        elif ans8=='B':
+            arr_answ.append('answer8_B')
+
+        # Если в 9 вопросе А
+        if ans9=='A':
+            arr_answ.append('answer9_A')
+
+        # Если в 9 вопросе B
+        elif ans9=='B':
+            arr_answ.append('answer9_B')
+
+        # Если в 10 вопросе А
+        if ans10=='A':
+            arr_answ.append('answer10_A')
+
+        # Если в 10 вопросе B
+        elif ans10=='B':
+            arr_answ.append('answer10_B')
+
+        # Если в 11 вопросе А
+        if ans11=='A':
+            arr_answ.append('answer11_A')
+
+        # Если в 11 вопросе B
+        elif ans11=='B':
+            arr_answ.append('answer11_B')
+
+        # Если в 12 вопросе А
+        if ans12=='A':
+            arr_answ.append('answer12_A')
+
+        # Если в 12 вопросе B
+        elif ans12=='B':
+            arr_answ.append('answer12_B')
+
+        # Если в 13 вопросе А
+        if ans13=='A':
+            arr_answ.append('answer13_A')
+
+        # Если в 13 вопросе B
+        elif ans13=='B':
+            arr_answ.append('answer13_B')
+
+        # Если в 14 вопросе А
+        if ans14=='A':
+            arr_answ.append('answer14_A')
+
+        # Если в 14 вопросе B
+        elif ans14=='B':
+            arr_answ.append('answer14_B')
+
+        # Если в 15 вопросе А
+        if ans15=='A':
+            arr_answ.append('answer15_A')
+
+        # Если в 15 вопросе B
+        elif ans15=='B':
+            arr_answ.append('answer15_B')
+
+        # Если в 16 вопросе А
+        if ans16=='A':
+            arr_answ.append('answer16_A')
+
+        # Если в 16 вопросе B
+        elif ans16=='B':
+            arr_answ.append('answer16_B')
+
+        # Если в 17 вопросе А
+        if ans17=='A':
+            arr_answ.append('answer17_A')
+
+        # Если в 17 вопросе B
+        elif ans17=='B':
+            arr_answ.append('answer17_B')
+
+        # Если в 18 вопросе А
+        if ans18=='A':
+            arr_answ.append('answer18_A')
+
+        # Если в 18 вопросе B
+        elif ans18=='B':
+            arr_answ.append('answer18_B')
+
+        # Если в 19 вопросе А
+        if ans19=='A':
+            arr_answ.append('answer19_A')
+
+        # Если в 19 вопросе B
+        elif ans19=='B':
+            arr_answ.append('answer19_B')
+
+        # Если в 20 вопросе А
+        if ans20=='A':
+            arr_answ.append('answer20_A')
+
+        # Если в 20 вопросе B
+        elif ans20=='B':
+            arr_answ.append('answer20_B')
+
+        # Если в 21 вопросе А
+        if ans21=='A':
+            arr_answ.append('answer21_A')
+
+        # Если в 21 вопросе B
+        elif ans21=='B':
+            arr_answ.append('answer21_B')
+
+        # Если в 22 вопросе А
+        if ans22=='A':
+            arr_answ.append('answer22_A')
+
+        # Если в 22 вопросе B
+        elif ans22=='B':
+            arr_answ.append('answer22_B')
+
+        # Если в 23 вопросе А
+        if ans23=='A':
+            arr_answ.append('answer23_A')
+
+        # Если в 23 вопросе B
+        elif ans23=='B':
+            arr_answ.append('answer23_B')
+
+        # Если в 24 вопросе А
+        if ans24=='A':
+            arr_answ.append('answer24_A')
+
+        # Если в 24 вопросе B
+        elif ans24=='B':
+            arr_answ.append('answer24_B')
+
+        # Если в 25 вопросе А
+        if ans25=='A':
+            arr_answ.append('answer25_A')
+
+        # Если в 25 вопросе B
+        elif ans25=='B':
+            arr_answ.append('answer25_B')
+
+        # Если в 26 вопросе А
+        if ans26=='A':
+            arr_answ.append('answer26_A')
+
+        # Если в 26 вопросе B
+        elif ans26=='B':
+            arr_answ.append('answer26_B')
+
+        # Если в 27 вопросе А
+        if ans27=='A':
+            arr_answ.append('answer27_A')
+
+        # Если в 27 вопросе B
+        elif ans27=='B':
+            arr_answ.append('answer27_B')
+
+        # Если в 28 вопросе А
+        if ans28=='A':
+            arr_answ.append('answer28_A')
+
+        # Если в 28 вопросе B
+        elif ans28=='B':
+            arr_answ.append('answer28_B')
+
+        # Если в 29 вопросе А
+        if ans29=='A':
+            arr_answ.append('answer29_A')
+
+        # Если в 29 вопросе B
+        elif ans29=='B':
+            arr_answ.append('answer29_B')
+
+        # Если в 30 вопросе А
+        if ans30=='A':
+            arr_answ.append('answer30_A')
+
+        # Если в 30 вопросе B
+        elif ans30=='B':
+            arr_answ.append('answer30_B')
 
         # Проверка на наличие всех ответов
         if len(arr_answ)<30:
@@ -837,15 +1113,86 @@ def result():
 def admin():
     global idd
 
+    # Форма для выбора количества человек
+    form_generation_group=Generation_group(request.form)
+
     # Обработка ответа
     if request.form and True:
 
         # Извлечение данных
         for i in request.form:
-            to_do=i
+            # Для того что бы отсечь список
+            if i!='count':
+                to_do=i
 
         # Такое невозможно, но мало ли
         if len(to_do)=='':
+
+            # Сбор данных для таблицы внизу админки
+            # Тут будут айди всех нераспределённых респондентов
+            arr_resp=[]
+            # Здесь будут их фио
+            arr_fio=[]
+            # Здесь будет хранится их характер
+            arr_haracter=[]
+
+            # Выборка данных из бд всех не распределённых респондентов
+            select=Results.query.filter_by(delete='-').all()
+            # Если нераспределённые респонденты есть
+            if select!=None:
+                # Циклом по всем респондентам
+                for i in select:
+                    # Собираем айди
+                    arr_resp.append(i.id_user)
+
+            # Если нераспределённых респондентов нет
+            else:
+                arr_fio=['Нераспределённых респондентов нет']
+                arr_haracter=['']
+
+            # Циклом по всем
+            for i in arr_resp:
+                # Делаем запрос к их личным данным
+                select=User.query.filter_by(id=i).first()
+                # Сохраняем фио
+                arr_fio.append(str(select.surname)+' '+str(select.name))
+
+            # Циклом по всем
+            for i in arr_resp:
+                # Запрос данных о характерах
+                select=Results.query.filter_by(id_user=i).first()
+
+                # Вычисление процента для соперничества
+                sop=select.count_sopernichestvo
+                sop=for_percent*float(sop)*10
+
+                # Вычисление процента для сотрудничества
+                sot=select.count_sotrudnichestvo
+                sot=for_percent*float(sot)*10
+
+                # Вычисление процента для компромиса
+                kom=select.count_kompromis
+                kom=for_percent*float(kom)*10
+
+                # Вычисление процента для избегания
+                izb=select.count_izbeganie
+                izb=for_percent*float(izb)*10
+
+                # Вычисление процента для приспособления
+                pri=select.count_prispososoblenie
+                pri=for_percent*float(pri)*10
+
+                # Сохраняем характеры
+                haracter=[
+                'Соперничество:'+str(int(sop)),
+                'Сотрудничество:'+str(int(sot)),
+                'Компромис:'+str(int(kom)),
+                'Избегание:'+str(int(izb)),
+                'Приспособление:'+str(int(pri))
+                ]
+                
+                # Добавляем в огромную кучу характеров
+                arr_haracter.append(haracter)
             
             # выборка данных админа
             select=User.query.filter_by(id=idd).first()
@@ -856,316 +1203,3253 @@ def admin():
                 middle_name=select.middle_name,
                 data='.',
                 last='.',
-                Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #002. Сообщите нам об этом пожалуйста!'
+                Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #002. Сообщите нам об этом пожалуйста!',
+                arr_fio=arr_fio,
+                arr_haracter=arr_haracter,
+                form_gp=form_generation_group
             )
 
         # Если надо сгенерировать группы
         if to_do=='generation':
 
-            # Собираем всех респондентов
-            arr_people=[]
-            select=User.query.filter_by(role='resp').all()
+            # Считываем по сколько надо генерировать
+            count_data=form_generation_group.count.data
 
-            # Если запрос не пустой
-            if select!=None:
-                for i in select:
+            # Если не выбранно количество человек
+            if count_data=='None':
 
-                    # проверка на удаление
-                    select=Results.query.filter_by(id_user=i.id).first()
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
 
-                    # если респондент не удалён
-                    if select.delete!='+':
-                        arr_people.append(i.id)
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
 
-                    # если респондент удалён
-                    else:
-                        pass
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
 
-                    # востанавливаем селект для цикла
-                    select=User.query.filter_by(role='resp').all()
-            
-            # Если запрос пустой
-            else:
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
 
-                # выборка данных админа
-                select=User.query.filter_by(id=idd).first()
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
 
-                return render_template('admin.html',
-                    surname=select.surname,
-                    name=select.name,
-                    middle_name=select.middle_name,
-                    data='.',
-                    last='.',
-                    Error='Респондентов нет.'
-                )
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
 
-            print(len(arr_people))
-            # Если нет респондентов
-            if len(arr_people)<5:
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
 
-                # выборка данных админа
-                select=User.query.filter_by(id=idd).first()
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
 
-                return render_template('admin.html',
-                    surname=select.surname,
-                    name=select.name,
-                    middle_name=select.middle_name,
-                    data='.',
-                    last='.',
-                    Error='Респондентов меньше 5.'
-                )
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
 
-            # создание списков всех характеров
-            arr_sotrudnichestvo=[]
-            arr_sopernichestvo=[]
-            arr_izbeganie=[]
-            arr_kompromis=[]
-            arr_prispososoblenie=[]
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
 
-            # цикл по всем респондентам
-            for i in arr_people:
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
                 
-                # выборка результатов пользователя
-                select=Results.query.filter_by(id_user=i).first()
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data='.',
+                    last='.',
+                    Error='Вы не выбрали количество человек для генерации!',
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
+                )
+
+            # Генерация групп для 3 человек
+            if count_data=='3':
+                
+                # Собираем всех респондентов
+                arr_people=[]
+                select=User.query.filter_by(role='resp').all()
 
                 # Если запрос не пустой
                 if select!=None:
+                    for i in select:
 
-                    # Если результат не удалён, то
-                    if select.delete=='-':
+                        # проверка на удаление
+                        select=Results.query.filter_by(id_user=i.id).first()
 
-                        # Выбор основного характера респондента и добавление его в списки характера
-                        if select.more_count=='sotrudnichestvo':
-                            arr_sotrudnichestvo.append(i)
-                            arr_sotrudnichestvo.append(select.count_sotrudnichestvo)
+                        # если респондент не удалён
+                        if select.delete!='+':
+                            arr_people.append(i.id)
 
-                        elif select.more_count=='sopernichestvo':
-                            arr_sopernichestvo.append(i)
-                            arr_sopernichestvo.append(select.count_sopernichestvo)
+                        # если респондент удалён
+                        else:
+                            pass
 
-                        elif select.more_count=='kompromis':
-                            arr_kompromis.append(i)
-                            arr_kompromis.append(select.count_kompromis)
-
-                        elif select.more_count=='izbeganie':
-                            arr_izbeganie.append(i)
-                            arr_izbeganie.append(select.count_izbeganie)
-
-                        elif select.more_count=='prisposoblenie':
-                            arr_prispososoblenie.append(i)
-                            arr_prispososoblenie.append(select.count_prispososoblenie)
-
-                    # если результат удалён
-                    else:
-                        pass
-
+                        # востанавливаем селект для цикла
+                        select=User.query.filter_by(role='resp').all()
+                
                 # Если запрос пустой
-                # else:
+                else:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
 
                     # выборка данных админа
-                    # select=User.query.filter_by(id=idd).first()
+                    select=User.query.filter_by(id=idd).first()
 
-                    # return render_template('admin.html',
-                    #     surname=select.surname,
-                    #     name=select.name,
-                    #     middle_name=select.middle_name,
-                    #     data='.',
-                    #     last='.',
-                    #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
-                    # )
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов нет.',
+                        arr_haracter=arr_haracter,
+                        arr_fio=arr_fio,
+                        form_gp=form_generation_group
+                    )
 
-            # сортировка характеров, что бы вначале списка был самый большой балл
-            arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
-            arr_sopernichestvo=sorted_group(arr_sopernichestvo)
-            arr_kompromis=sorted_group(arr_kompromis)
-            arr_izbeganie=sorted_group(arr_izbeganie)
-            arr_prispososoblenie=sorted_group(arr_prispososoblenie)
+                # Если нет респондентов
+                if len(arr_people)<3:
 
-            # выясняем какое минимальное число людей в характере
-            max_people=100
-            if max_people>int(len(arr_sopernichestvo)/2):
-                if len(arr_sopernichestvo)!=0:
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
 
-                        max_people=int(len(arr_sopernichestvo)/2)
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
 
-                else:
-                    max_people=0
-            
-            if max_people>int(len(arr_sotrudnichestvo)/2):
-                if len(arr_sotrudnichestvo)!=0:
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
 
-                    max_people=int(len(arr_sotrudnichestvo)/2)
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
 
-                else:
-                    max_people=0
-            
-            if max_people>int(len(arr_kompromis)/2):
-                if len(arr_kompromis)!=0:
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
 
-                    max_people=int(len(arr_kompromis)/2)
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
 
-                else:
-                    max_people=0
-            
-            if max_people>int(len(arr_izbeganie)/2):
-                if len(arr_izbeganie)!=0:
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
 
-                    max_people=int(len(arr_izbeganie)/2)
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
 
-                else:
-                    max_people=0
-            
-            if max_people>int(len(arr_prispososoblenie)/2):
-                if len(arr_prispososoblenie)!=0:
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
 
-                    max_people=int(len(arr_prispososoblenie)/2)
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
 
-                else:
-                    max_people=0
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
 
-            # начинаем создавать группы
-            arr_group=[]
-            group=[]
-            count_people=int((len(arr_sotrudnichestvo)+len(arr_sopernichestvo)+len(arr_kompromis)+len(arr_izbeganie)+len(arr_prispososoblenie))/2)
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
 
-            # ПОТОМ УБРАТЬ
-            max_people=0
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов меньше 3.',
+                        arr_fio=arr_fio,
+                        arr_haracter=arr_haracter,
+                        form_gp=form_generation_group
+                    )
 
-            # Если есть характеры без людей
-            if max_people==0:
-                
-                # Цикл пока есть люди для распределения
-                while True:
+                # создание списков всех характеров
+                arr_sotrudnichestvo=[]
+                arr_sopernichestvo=[]
+                arr_izbeganie=[]
+                arr_kompromis=[]
+                arr_prispososoblenie=[]
 
-                    # Если в характере есть люди
+                # цикл по всем респондентам
+                for i in arr_people:
+                    
+                    # выборка результатов пользователя
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Если запрос не пустой
+                    if select!=None:
+
+                        # Если результат не удалён, то
+                        if select.delete=='-':
+
+                            # Выбор основного характера респондента и добавление его в списки характера
+                            if select.more_count=='sotrudnichestvo':
+                                arr_sotrudnichestvo.append(i)
+                                arr_sotrudnichestvo.append(select.count_sotrudnichestvo)
+
+                            elif select.more_count=='sopernichestvo':
+                                arr_sopernichestvo.append(i)
+                                arr_sopernichestvo.append(select.count_sopernichestvo)
+
+                            elif select.more_count=='kompromis':
+                                arr_kompromis.append(i)
+                                arr_kompromis.append(select.count_kompromis)
+
+                            elif select.more_count=='izbeganie':
+                                arr_izbeganie.append(i)
+                                arr_izbeganie.append(select.count_izbeganie)
+
+                            elif select.more_count=='prisposoblenie':
+                                arr_prispososoblenie.append(i)
+                                arr_prispososoblenie.append(select.count_prispososoblenie)
+
+                        # если результат удалён
+                        else:
+                            pass
+
+                    # Если запрос пустой
+                    # else:
+
+                        # выборка данных админа
+                        # select=User.query.filter_by(id=idd).first()
+
+                        # return render_template('admin.html',
+                        #     surname=select.surname,
+                        #     name=select.name,
+                        #     middle_name=select.middle_name,
+                        #     data='.',
+                        #     last='.',
+                        #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
+                        # )
+
+                # сортировка характеров, что бы вначале списка был самый большой балл
+                arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
+                arr_sopernichestvo=sorted_group(arr_sopernichestvo)
+                arr_kompromis=sorted_group(arr_kompromis)
+                arr_izbeganie=sorted_group(arr_izbeganie)
+                arr_prispososoblenie=sorted_group(arr_prispososoblenie)
+
+                # выясняем какое минимальное число людей в характере
+                max_people=100
+                if max_people>int(len(arr_sopernichestvo)/2):
                     if len(arr_sopernichestvo)!=0:
-                        # добавление человека с максимальным баллом в группу
-                        group.append(arr_sopernichestvo[0])
-                        # Удалиение добавленного из характера
-                        arr_sopernichestvo.pop(0)
-                        arr_sopernichestvo.pop(0)
-                        # логично что на одного человека незанятого стало меньше
-                        count_people-=1
 
-                        # если группа набралась
-                        if len(group)==5:
-                            # добавляем группу в большой список групп и обновляем её
-                            arr_group.append(group)
-                            group=[]
+                            max_people=int(len(arr_sopernichestvo)/2)
 
-                            # если людей для новой группы не осталось, выходим из цикла
-                            if count_people<5:
-                                break
-
-                    # Аналогично первому условию в этом цикле
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_sotrudnichestvo)/2):
                     if len(arr_sotrudnichestvo)!=0:
-                        group.append(arr_sotrudnichestvo[0])
-                        arr_sotrudnichestvo.pop(0)
-                        arr_sotrudnichestvo.pop(0)
-                        count_people-=1
 
-                        if len(group)==5:
-                            arr_group.append(group)
-                            group=[]
+                        max_people=int(len(arr_sotrudnichestvo)/2)
 
-                            if count_people<5:
-                                break
-
-                    # Аналогично первому условию в этом цикле
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_kompromis)/2):
                     if len(arr_kompromis)!=0:
-                        group.append(arr_kompromis[0])
-                        arr_kompromis.pop(0)
-                        arr_kompromis.pop(0)
-                        count_people-=1
 
-                        if len(group)==5:
-                            arr_group.append(group)
-                            group=[]
+                        max_people=int(len(arr_kompromis)/2)
 
-                            if count_people<5:
-                                break
-
-                    # Аналогично первому условию в этом цикле
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_izbeganie)/2):
                     if len(arr_izbeganie)!=0:
-                        group.append(arr_izbeganie[0])
-                        arr_izbeganie.pop(0)
-                        arr_izbeganie.pop(0)
-                        count_people-=1
 
-                        if len(group)==5:
-                            arr_group.append(group)
-                            group=[]
+                        max_people=int(len(arr_izbeganie)/2)
 
-                            if count_people<5:
-                                break
-
-                    # Аналогично первому условию в этом цикле
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_prispososoblenie)/2):
                     if len(arr_prispososoblenie)!=0:
+
+                        max_people=int(len(arr_prispososoblenie)/2)
+
+                    else:
+                        max_people=0
+
+                # начинаем создавать группы
+                arr_group=[]
+                group=[]
+                count_people=int((len(arr_sotrudnichestvo)+len(arr_sopernichestvo)+len(arr_kompromis)+len(arr_izbeganie)+len(arr_prispososoblenie))/2)
+
+                # ПОТОМ УБРАТЬ
+                max_people=0
+
+                # Если есть характеры без людей
+                if max_people==0:
+                    
+                    # Цикл пока есть люди для распределения
+                    while True:
+
+                        # Если в характере есть люди
+                        if len(arr_sopernichestvo)!=0:
+                            # добавление человека с максимальным баллом в группу
+                            group.append(arr_sopernichestvo[0])
+                            # Удалиение добавленного из характера
+                            arr_sopernichestvo.pop(0)
+                            arr_sopernichestvo.pop(0)
+                            # логично что на одного человека незанятого стало меньше
+                            count_people-=1
+
+                            # если группа набралась
+                            if len(group)==3:
+                                # добавляем группу в большой список групп и обновляем её
+                                arr_group.append(group)
+                                group=[]
+
+                                # если людей для новой группы не осталось, выходим из цикла
+                                if count_people<3:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_sotrudnichestvo)!=0:
+                            group.append(arr_sotrudnichestvo[0])
+                            arr_sotrudnichestvo.pop(0)
+                            arr_sotrudnichestvo.pop(0)
+                            count_people-=1
+
+                            if len(group)==3:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<3:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_kompromis)!=0:
+                            group.append(arr_kompromis[0])
+                            arr_kompromis.pop(0)
+                            arr_kompromis.pop(0)
+                            count_people-=1
+
+                            if len(group)==3:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<3:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_izbeganie)!=0:
+                            group.append(arr_izbeganie[0])
+                            arr_izbeganie.pop(0)
+                            arr_izbeganie.pop(0)
+                            count_people-=1
+
+                            if len(group)==3:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<3:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_prispososoblenie)!=0:
+                            group.append(arr_prispososoblenie[0])
+                            arr_prispososoblenie.pop(0)
+                            arr_prispososoblenie.pop(0)
+                            count_people-=1
+
+                            if len(group)==3:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<3:
+                                    break
+                 
+                # если все характеры полные                   
+                else:
+                    # цикл пока не появятся характеры без людей
+                    for i in range(max_people):
+                        pass
+                
+                # набираем данные для отображения на странице
+                data=[]
+
+                # Добавление данных о созданных группах
+                for i in range(len(arr_group)):
+                    data.append('Группа №'+str(i+1))
+
+                    for j in arr_group[i]:
+                        select=User.query.filter_by(id=int(j)).first()
+                        data.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # Добавляем данные о тех, кто остался нерапспределённым
+                last=[]
+                for i in range(0, len(arr_sopernichestvo), 2):
+                    last.append(arr_sopernichestvo[i])
+
+                for i in range(0, len(arr_sotrudnichestvo), 2):
+                    last.append(arr_sotrudnichestvo[i])
+
+                for i in range(0, len(arr_kompromis), 2):
+                    last.append(arr_kompromis[i])
+
+                for i in range(0, len(arr_izbeganie), 2):
+                    last.append(arr_izbeganie[i])
+
+                for i in range(0, len(arr_prispososoblenie), 2):
+                    last.append(arr_prispososoblenie[i])
+
+                # добавление персональных данных нераспределённых
+                new_last=[]
+                for i in last:
+                    select=User.query.filter_by(id=int(i)).first()
+                    new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # теперь нужны только персональные данные
+                last=new_last
+
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                # создание страницы админа
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data=data,
+                    last=last,
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
+                    )
+
+            # Генерация групп для 4 человек
+            elif count_data=='4':
+                
+                # Собираем всех респондентов
+                arr_people=[]
+                select=User.query.filter_by(role='resp').all()
+
+                # Если запрос не пустой
+                if select!=None:
+                    for i in select:
+
+                        # проверка на удаление
+                        select=Results.query.filter_by(id_user=i.id).first()
+
+                        # если респондент не удалён
+                        if select.delete!='+':
+                            arr_people.append(i.id)
+
+                        # если респондент удалён
+                        else:
+                            pass
+
+                        # востанавливаем селект для цикла
+                        select=User.query.filter_by(role='resp').all()
+                
+                # Если запрос пустой
+                else:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов нет.',
+                        arr_haracter=arr_haracter,
+                        arr_fio=arr_fio,
+                        form_gp=form_generation_group
+                    )
+
+                # Если нет респондентов
+                if len(arr_people)<4:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов меньше 4.',
+                        arr_fio=arr_fio,
+                        arr_haracter=arr_haracter,
+                        form_gp=form_generation_group
+                    )
+
+                # создание списков всех характеров
+                arr_sotrudnichestvo=[]
+                arr_sopernichestvo=[]
+                arr_izbeganie=[]
+                arr_kompromis=[]
+                arr_prispososoblenie=[]
+
+                # цикл по всем респондентам
+                for i in arr_people:
+                    
+                    # выборка результатов пользователя
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Если запрос не пустой
+                    if select!=None:
+
+                        # Если результат не удалён, то
+                        if select.delete=='-':
+
+                            # Выбор основного характера респондента и добавление его в списки характера
+                            if select.more_count=='sotrudnichestvo':
+                                arr_sotrudnichestvo.append(i)
+                                arr_sotrudnichestvo.append(select.count_sotrudnichestvo)
+
+                            elif select.more_count=='sopernichestvo':
+                                arr_sopernichestvo.append(i)
+                                arr_sopernichestvo.append(select.count_sopernichestvo)
+
+                            elif select.more_count=='kompromis':
+                                arr_kompromis.append(i)
+                                arr_kompromis.append(select.count_kompromis)
+
+                            elif select.more_count=='izbeganie':
+                                arr_izbeganie.append(i)
+                                arr_izbeganie.append(select.count_izbeganie)
+
+                            elif select.more_count=='prisposoblenie':
+                                arr_prispososoblenie.append(i)
+                                arr_prispososoblenie.append(select.count_prispososoblenie)
+
+                        # если результат удалён
+                        else:
+                            pass
+
+                    # Если запрос пустой
+                    # else:
+
+                        # выборка данных админа
+                        # select=User.query.filter_by(id=idd).first()
+
+                        # return render_template('admin.html',
+                        #     surname=select.surname,
+                        #     name=select.name,
+                        #     middle_name=select.middle_name,
+                        #     data='.',
+                        #     last='.',
+                        #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
+                        # )
+
+                # сортировка характеров, что бы вначале списка был самый большой балл
+                arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
+                arr_sopernichestvo=sorted_group(arr_sopernichestvo)
+                arr_kompromis=sorted_group(arr_kompromis)
+                arr_izbeganie=sorted_group(arr_izbeganie)
+                arr_prispososoblenie=sorted_group(arr_prispososoblenie)
+
+                # выясняем какое минимальное число людей в характере
+                max_people=100
+                if max_people>int(len(arr_sopernichestvo)/2):
+                    if len(arr_sopernichestvo)!=0:
+
+                            max_people=int(len(arr_sopernichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_sotrudnichestvo)/2):
+                    if len(arr_sotrudnichestvo)!=0:
+
+                        max_people=int(len(arr_sotrudnichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_kompromis)/2):
+                    if len(arr_kompromis)!=0:
+
+                        max_people=int(len(arr_kompromis)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_izbeganie)/2):
+                    if len(arr_izbeganie)!=0:
+
+                        max_people=int(len(arr_izbeganie)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_prispososoblenie)/2):
+                    if len(arr_prispososoblenie)!=0:
+
+                        max_people=int(len(arr_prispososoblenie)/2)
+
+                    else:
+                        max_people=0
+
+                # начинаем создавать группы
+                arr_group=[]
+                group=[]
+                count_people=int((len(arr_sotrudnichestvo)+len(arr_sopernichestvo)+len(arr_kompromis)+len(arr_izbeganie)+len(arr_prispososoblenie))/2)
+
+                # ПОТОМ УБРАТЬ
+                max_people=0
+
+                # Если есть характеры без людей
+                if max_people==0:
+                    
+                    # Цикл пока есть люди для распределения
+                    while True:
+
+                        # Если в характере есть люди
+                        if len(arr_sopernichestvo)!=0:
+                            # добавление человека с максимальным баллом в группу
+                            group.append(arr_sopernichestvo[0])
+                            # Удалиение добавленного из характера
+                            arr_sopernichestvo.pop(0)
+                            arr_sopernichestvo.pop(0)
+                            # логично что на одного человека незанятого стало меньше
+                            count_people-=1
+
+                            # если группа набралась
+                            if len(group)==4:
+                                # добавляем группу в большой список групп и обновляем её
+                                arr_group.append(group)
+                                group=[]
+
+                                # если людей для новой группы не осталось, выходим из цикла
+                                if count_people<4:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_sotrudnichestvo)!=0:
+                            group.append(arr_sotrudnichestvo[0])
+                            arr_sotrudnichestvo.pop(0)
+                            arr_sotrudnichestvo.pop(0)
+                            count_people-=1
+
+                            if len(group)==4:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<4:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_kompromis)!=0:
+                            group.append(arr_kompromis[0])
+                            arr_kompromis.pop(0)
+                            arr_kompromis.pop(0)
+                            count_people-=1
+
+                            if len(group)==4:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<4:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_izbeganie)!=0:
+                            group.append(arr_izbeganie[0])
+                            arr_izbeganie.pop(0)
+                            arr_izbeganie.pop(0)
+                            count_people-=1
+
+                            if len(group)==4:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<4:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_prispososoblenie)!=0:
+                            group.append(arr_prispososoblenie[0])
+                            arr_prispososoblenie.pop(0)
+                            arr_prispososoblenie.pop(0)
+                            count_people-=1
+
+                            if len(group)==4:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<4:
+                                    break
+                 
+                # если все характеры полные                   
+                else:
+                    # цикл пока не появятся характеры без людей
+                    for i in range(max_people):
+                        pass
+                
+                # набираем данные для отображения на странице
+                data=[]
+
+                # Добавление данных о созданных группах
+                for i in range(len(arr_group)):
+                    data.append('Группа №'+str(i+1))
+
+                    for j in arr_group[i]:
+                        select=User.query.filter_by(id=int(j)).first()
+                        data.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # Добавляем данные о тех, кто остался нерапспределённым
+                last=[]
+                for i in range(0, len(arr_sopernichestvo), 2):
+                    last.append(arr_sopernichestvo[i])
+
+                for i in range(0, len(arr_sotrudnichestvo), 2):
+                    last.append(arr_sotrudnichestvo[i])
+
+                for i in range(0, len(arr_kompromis), 2):
+                    last.append(arr_kompromis[i])
+
+                for i in range(0, len(arr_izbeganie), 2):
+                    last.append(arr_izbeganie[i])
+
+                for i in range(0, len(arr_prispososoblenie), 2):
+                    last.append(arr_prispososoblenie[i])
+
+                # добавление персональных данных нераспределённых
+                new_last=[]
+                for i in last:
+                    select=User.query.filter_by(id=int(i)).first()
+                    new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # теперь нужны только персональные данные
+                last=new_last
+
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                # создание страницы админа
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data=data,
+                    last=last,
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
+                    )
+
+            # Генерация групп для 5 человек
+            elif count_data=='5':
+                
+                # Собираем всех респондентов
+                arr_people=[]
+                select=User.query.filter_by(role='resp').all()
+
+                # Если запрос не пустой
+                if select!=None:
+                    for i in select:
+
+                        # проверка на удаление
+                        select=Results.query.filter_by(id_user=i.id).first()
+
+                        # если респондент не удалён
+                        if select.delete!='+':
+                            arr_people.append(i.id)
+
+                        # если респондент удалён
+                        else:
+                            pass
+
+                        # востанавливаем селект для цикла
+                        select=User.query.filter_by(role='resp').all()
+                
+                # Если запрос пустой
+                else:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов нет.',
+                        arr_haracter=arr_haracter,
+                        arr_fio=arr_fio,
+                        form_gp=form_generation_group
+                    )
+
+                # Если нет респондентов
+                if len(arr_people)<5:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов меньше 5.',
+                        arr_fio=arr_fio,
+                        arr_haracter=arr_haracter,
+                        form_gp=form_generation_group
+                    )
+
+                # создание списков всех характеров
+                arr_sotrudnichestvo=[]
+                arr_sopernichestvo=[]
+                arr_izbeganie=[]
+                arr_kompromis=[]
+                arr_prispososoblenie=[]
+
+                # цикл по всем респондентам
+                for i in arr_people:
+                    
+                    # выборка результатов пользователя
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Если запрос не пустой
+                    if select!=None:
+
+                        # Если результат не удалён, то
+                        if select.delete=='-':
+
+                            # Выбор основного характера респондента и добавление его в списки характера
+                            if select.more_count=='sotrudnichestvo':
+                                arr_sotrudnichestvo.append(i)
+                                arr_sotrudnichestvo.append(select.count_sotrudnichestvo)
+
+                            elif select.more_count=='sopernichestvo':
+                                arr_sopernichestvo.append(i)
+                                arr_sopernichestvo.append(select.count_sopernichestvo)
+
+                            elif select.more_count=='kompromis':
+                                arr_kompromis.append(i)
+                                arr_kompromis.append(select.count_kompromis)
+
+                            elif select.more_count=='izbeganie':
+                                arr_izbeganie.append(i)
+                                arr_izbeganie.append(select.count_izbeganie)
+
+                            elif select.more_count=='prisposoblenie':
+                                arr_prispososoblenie.append(i)
+                                arr_prispososoblenie.append(select.count_prispososoblenie)
+
+                        # если результат удалён
+                        else:
+                            pass
+
+                    # Если запрос пустой
+                    # else:
+
+                        # выборка данных админа
+                        # select=User.query.filter_by(id=idd).first()
+
+                        # return render_template('admin.html',
+                        #     surname=select.surname,
+                        #     name=select.name,
+                        #     middle_name=select.middle_name,
+                        #     data='.',
+                        #     last='.',
+                        #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
+                        # )
+
+                # сортировка характеров, что бы вначале списка был самый большой балл
+                arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
+                arr_sopernichestvo=sorted_group(arr_sopernichestvo)
+                arr_kompromis=sorted_group(arr_kompromis)
+                arr_izbeganie=sorted_group(arr_izbeganie)
+                arr_prispososoblenie=sorted_group(arr_prispososoblenie)
+
+                # выясняем какое минимальное число людей в характере
+                max_people=100
+                if max_people>int(len(arr_sopernichestvo)/2):
+                    if len(arr_sopernichestvo)!=0:
+
+                            max_people=int(len(arr_sopernichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_sotrudnichestvo)/2):
+                    if len(arr_sotrudnichestvo)!=0:
+
+                        max_people=int(len(arr_sotrudnichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_kompromis)/2):
+                    if len(arr_kompromis)!=0:
+
+                        max_people=int(len(arr_kompromis)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_izbeganie)/2):
+                    if len(arr_izbeganie)!=0:
+
+                        max_people=int(len(arr_izbeganie)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_prispososoblenie)/2):
+                    if len(arr_prispososoblenie)!=0:
+
+                        max_people=int(len(arr_prispososoblenie)/2)
+
+                    else:
+                        max_people=0
+
+                # начинаем создавать группы
+                arr_group=[]
+                group=[]
+                count_people=int((len(arr_sotrudnichestvo)+len(arr_sopernichestvo)+len(arr_kompromis)+len(arr_izbeganie)+len(arr_prispososoblenie))/2)
+
+                # ПОТОМ УБРАТЬ
+                # max_people=0
+
+                # Если есть характеры без людей
+                if max_people==0:
+                    
+                    # Цикл пока есть люди для распределения
+                    while True:
+
+                        # Если в характере есть люди
+                        if len(arr_sopernichestvo)!=0:
+                            # добавление человека с максимальным баллом в группу
+                            group.append(arr_sopernichestvo[0])
+                            # Удалиение добавленного из характера
+                            arr_sopernichestvo.pop(0)
+                            arr_sopernichestvo.pop(0)
+                            # логично что на одного человека незанятого стало меньше
+                            count_people-=1
+
+                            # если группа набралась
+                            if len(group)==5:
+                                # добавляем группу в большой список групп и обновляем её
+                                arr_group.append(group)
+                                group=[]
+
+                                # если людей для новой группы не осталось, выходим из цикла
+                                if count_people<5:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_sotrudnichestvo)!=0:
+                            group.append(arr_sotrudnichestvo[0])
+                            arr_sotrudnichestvo.pop(0)
+                            arr_sotrudnichestvo.pop(0)
+                            count_people-=1
+
+                            if len(group)==5:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<5:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_kompromis)!=0:
+                            group.append(arr_kompromis[0])
+                            arr_kompromis.pop(0)
+                            arr_kompromis.pop(0)
+                            count_people-=1
+
+                            if len(group)==5:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<5:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_izbeganie)!=0:
+                            group.append(arr_izbeganie[0])
+                            arr_izbeganie.pop(0)
+                            arr_izbeganie.pop(0)
+                            count_people-=1
+
+                            if len(group)==5:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<5:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_prispososoblenie)!=0:
+                            group.append(arr_prispososoblenie[0])
+                            arr_prispososoblenie.pop(0)
+                            arr_prispososoblenie.pop(0)
+                            count_people-=1
+
+                            if len(group)==5:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<5:
+                                    break
+                 
+                # если все характеры полные                   
+                else:
+
+                    # цикл пока не появятся характеры без людей
+                    for i in range(max_people):
+
+                        # Добавляем в группу самых сильных каждого характера
+                        group.append(arr_sotrudnichestvo[0])
+                        group.append(arr_sopernichestvo[0])
+                        group.append(arr_izbeganie[0])
+                        group.append(arr_kompromis[0])
                         group.append(arr_prispososoblenie[0])
+
+                        # Выбрасываем из рабочего списка
+                        arr_sotrudnichestvo.pop(0)
+                        arr_sotrudnichestvo.pop(0)
+                        arr_sopernichestvo.pop(0)
+                        arr_sopernichestvo.pop(0)
+                        arr_izbeganie.pop(0)
+                        arr_izbeganie.pop(0)
+                        arr_kompromis.pop(0)
+                        arr_kompromis.pop(0)
                         arr_prispososoblenie.pop(0)
                         arr_prispososoblenie.pop(0)
-                        count_people-=1
 
-                        if len(group)==5:
-                            arr_group.append(group)
-                            group=[]
+                        # Добавляем созданную группу в список всех групп
+                        arr_group.append(group)
 
-                            if count_people<5:
-                                break
-             
-            # если все характеры полные                   
+                        # Раз мы добавили 5 человек, то людей на 5 меньше
+                        count_people-=5
+
+                        # Разумеется обнуляем контейнер
+                        group=[]
+
+                    # Если ещё есть люди на распределение
+                    if count_people>5:
+
+                        # Цикл пока есть люди для распределения
+                        while True:
+
+                            # Если в характере есть люди
+                            if len(arr_sopernichestvo)!=0:
+                                # добавление человека с максимальным баллом в группу
+                                group.append(arr_sopernichestvo[0])
+                                # Удалиение добавленного из характера
+                                arr_sopernichestvo.pop(0)
+                                arr_sopernichestvo.pop(0)
+                                # логично что на одного человека незанятого стало меньше
+                                count_people-=1
+
+                                # если группа набралась
+                                if len(group)==5:
+                                    # добавляем группу в большой список групп и обновляем её
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    # если людей для новой группы не осталось, выходим из цикла
+                                    if count_people<5:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_sotrudnichestvo)!=0:
+                                group.append(arr_sotrudnichestvo[0])
+                                arr_sotrudnichestvo.pop(0)
+                                arr_sotrudnichestvo.pop(0)
+                                count_people-=1
+
+                                if len(group)==5:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<5:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_kompromis)!=0:
+                                group.append(arr_kompromis[0])
+                                arr_kompromis.pop(0)
+                                arr_kompromis.pop(0)
+                                count_people-=1
+
+                                if len(group)==5:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<5:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_izbeganie)!=0:
+                                group.append(arr_izbeganie[0])
+                                arr_izbeganie.pop(0)
+                                arr_izbeganie.pop(0)
+                                count_people-=1
+
+                                if len(group)==5:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<5:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_prispososoblenie)!=0:
+                                group.append(arr_prispososoblenie[0])
+                                arr_prispososoblenie.pop(0)
+                                arr_prispososoblenie.pop(0)
+                                count_people-=1
+
+                                if len(group)==5:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<5:
+                                        break
+
+                # набираем данные для отображения на странице
+                data=[]
+
+                # Добавление данных о созданных группах
+                for i in range(len(arr_group)):
+                    data.append('Группа №'+str(i+1))
+
+                    for j in arr_group[i]:
+                        select=User.query.filter_by(id=int(j)).first()
+                        data.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # Добавляем данные о тех, кто остался нерапспределённым
+                last=[]
+                for i in range(0, len(arr_sopernichestvo), 2):
+                    last.append(arr_sopernichestvo[i])
+
+                for i in range(0, len(arr_sotrudnichestvo), 2):
+                    last.append(arr_sotrudnichestvo[i])
+
+                for i in range(0, len(arr_kompromis), 2):
+                    last.append(arr_kompromis[i])
+
+                for i in range(0, len(arr_izbeganie), 2):
+                    last.append(arr_izbeganie[i])
+
+                for i in range(0, len(arr_prispososoblenie), 2):
+                    last.append(arr_prispososoblenie[i])
+
+                # добавление персональных данных нераспределённых
+                new_last=[]
+                for i in last:
+                    select=User.query.filter_by(id=int(i)).first()
+                    new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # теперь нужны только персональные данные
+                last=new_last
+
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                # создание страницы админа
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data=data,
+                    last=last,
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
+                    )
+
+            # Генерация групп для 6 человек
+            elif count_data=='6':
+                
+                # Собираем всех респондентов
+                arr_people=[]
+                select=User.query.filter_by(role='resp').all()
+
+                # Если запрос не пустой
+                if select!=None:
+                    for i in select:
+
+                        # проверка на удаление
+                        select=Results.query.filter_by(id_user=i.id).first()
+
+                        # если респондент не удалён
+                        if select.delete!='+':
+                            arr_people.append(i.id)
+
+                        # если респондент удалён
+                        else:
+                            pass
+
+                        # востанавливаем селект для цикла
+                        select=User.query.filter_by(role='resp').all()
+                
+                # Если запрос пустой
+                else:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов нет.',
+                        arr_haracter=arr_haracter,
+                        arr_fio=arr_fio,
+                        form_gp=form_generation_group
+                    )
+
+                # Если нет респондентов
+                if len(arr_people)<6:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов меньше 6.',
+                        arr_fio=arr_fio,
+                        arr_haracter=arr_haracter,
+                        form_gp=form_generation_group
+                    )
+
+                # создание списков всех характеров
+                arr_sotrudnichestvo=[]
+                arr_sopernichestvo=[]
+                arr_izbeganie=[]
+                arr_kompromis=[]
+                arr_prispososoblenie=[]
+
+                # цикл по всем респондентам
+                for i in arr_people:
+                    
+                    # выборка результатов пользователя
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Если запрос не пустой
+                    if select!=None:
+
+                        # Если результат не удалён, то
+                        if select.delete=='-':
+
+                            # Выбор основного характера респондента и добавление его в списки характера
+                            if select.more_count=='sotrudnichestvo':
+                                arr_sotrudnichestvo.append(i)
+                                arr_sotrudnichestvo.append(select.count_sotrudnichestvo)
+
+                            elif select.more_count=='sopernichestvo':
+                                arr_sopernichestvo.append(i)
+                                arr_sopernichestvo.append(select.count_sopernichestvo)
+
+                            elif select.more_count=='kompromis':
+                                arr_kompromis.append(i)
+                                arr_kompromis.append(select.count_kompromis)
+
+                            elif select.more_count=='izbeganie':
+                                arr_izbeganie.append(i)
+                                arr_izbeganie.append(select.count_izbeganie)
+
+                            elif select.more_count=='prisposoblenie':
+                                arr_prispososoblenie.append(i)
+                                arr_prispososoblenie.append(select.count_prispososoblenie)
+
+                        # если результат удалён
+                        else:
+                            pass
+
+                    # Если запрос пустой
+                    # else:
+
+                        # выборка данных админа
+                        # select=User.query.filter_by(id=idd).first()
+
+                        # return render_template('admin.html',
+                        #     surname=select.surname,
+                        #     name=select.name,
+                        #     middle_name=select.middle_name,
+                        #     data='.',
+                        #     last='.',
+                        #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
+                        # )
+
+                # сортировка характеров, что бы вначале списка был самый большой балл
+                arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
+                arr_sopernichestvo=sorted_group(arr_sopernichestvo)
+                arr_kompromis=sorted_group(arr_kompromis)
+                arr_izbeganie=sorted_group(arr_izbeganie)
+                arr_prispososoblenie=sorted_group(arr_prispososoblenie)
+
+                # выясняем какое минимальное число людей в характере
+                max_people=100
+                if max_people>int(len(arr_sopernichestvo)/2):
+                    if len(arr_sopernichestvo)!=0:
+
+                            max_people=int(len(arr_sopernichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_sotrudnichestvo)/2):
+                    if len(arr_sotrudnichestvo)!=0:
+
+                        max_people=int(len(arr_sotrudnichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_kompromis)/2):
+                    if len(arr_kompromis)!=0:
+
+                        max_people=int(len(arr_kompromis)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_izbeganie)/2):
+                    if len(arr_izbeganie)!=0:
+
+                        max_people=int(len(arr_izbeganie)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_prispososoblenie)/2):
+                    if len(arr_prispososoblenie)!=0:
+
+                        max_people=int(len(arr_prispososoblenie)/2)
+
+                    else:
+                        max_people=0
+
+                # начинаем создавать группы
+                arr_group=[]
+                group=[]
+                count_people=int((len(arr_sotrudnichestvo)+len(arr_sopernichestvo)+len(arr_kompromis)+len(arr_izbeganie)+len(arr_prispososoblenie))/2)
+
+                # ПОТОМ УБРАТЬ
+                # max_people=0
+
+                # Если есть характеры без людей
+                if max_people==0:
+                    
+                    # Цикл пока есть люди для распределения
+                    while True:
+
+                        # Если в характере есть люди
+                        if len(arr_sopernichestvo)!=0:
+                            # добавление человека с максимальным баллом в группу
+                            group.append(arr_sopernichestvo[0])
+                            # Удалиение добавленного из характера
+                            arr_sopernichestvo.pop(0)
+                            arr_sopernichestvo.pop(0)
+                            # логично что на одного человека незанятого стало меньше
+                            count_people-=1
+
+                            # если группа набралась
+                            if len(group)==6:
+                                # добавляем группу в большой список групп и обновляем её
+                                arr_group.append(group)
+                                group=[]
+
+                                # если людей для новой группы не осталось, выходим из цикла
+                                if count_people<6:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_sotrudnichestvo)!=0:
+                            group.append(arr_sotrudnichestvo[0])
+                            arr_sotrudnichestvo.pop(0)
+                            arr_sotrudnichestvo.pop(0)
+                            count_people-=1
+
+                            if len(group)==6:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<6:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_kompromis)!=0:
+                            group.append(arr_kompromis[0])
+                            arr_kompromis.pop(0)
+                            arr_kompromis.pop(0)
+                            count_people-=1
+
+                            if len(group)==6:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<6:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_izbeganie)!=0:
+                            group.append(arr_izbeganie[0])
+                            arr_izbeganie.pop(0)
+                            arr_izbeganie.pop(0)
+                            count_people-=1
+
+                            if len(group)==6:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<6:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_prispososoblenie)!=0:
+                            group.append(arr_prispososoblenie[0])
+                            arr_prispososoblenie.pop(0)
+                            arr_prispososoblenie.pop(0)
+                            count_people-=1
+
+                            if len(group)==6:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<6:
+                                    break
+                 
+                # если все характеры полные                   
+                else:
+                    
+                    # цикл пока не появятся характеры без людей
+                    # Должен быть макс_каунт вместо 1 но он не стабилен будет, слишком много расчётов нужно будет заного после каждой
+                    for i in range(1):
+
+                        # Добавляем в группу самых сильных каждого характера
+                        group.append(arr_sotrudnichestvo[0])
+                        group.append(arr_sopernichestvo[0])
+                        group.append(arr_izbeganie[0])
+                        group.append(arr_kompromis[0])
+                        group.append(arr_prispososoblenie[0])
+
+                        # Выбрасываем из рабочего списка
+                        arr_sotrudnichestvo.pop(0)
+                        arr_sotrudnichestvo.pop(0)
+                        arr_sopernichestvo.pop(0)
+                        arr_sopernichestvo.pop(0)
+                        arr_izbeganie.pop(0)
+                        arr_izbeganie.pop(0)
+                        arr_kompromis.pop(0)
+                        arr_kompromis.pop(0)
+                        arr_prispososoblenie.pop(0)
+                        arr_prispososoblenie.pop(0)
+
+                        # Раз мы добавили 5 человек, то людей на 5 меньше
+                        count_people-=5
+
+                        # Цикл пока есть люди для распределения
+                        while True:
+
+                            # Если в характере есть люди
+                            if len(arr_sopernichestvo)!=0:
+                                # добавление человека с максимальным баллом в группу
+                                group.append(arr_sopernichestvo[0])
+                                # Удалиение добавленного из характера
+                                arr_sopernichestvo.pop(0)
+                                arr_sopernichestvo.pop(0)
+                                # логично что на одного человека незанятого стало меньше
+                                count_people-=1
+
+                                # если группа набралась
+                                if len(group)==6:
+                                    # добавляем группу в большой список групп и обновляем её
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    # если людей для новой группы не осталось, выходим из цикла
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_sotrudnichestvo)!=0:
+                                group.append(arr_sotrudnichestvo[0])
+                                arr_sotrudnichestvo.pop(0)
+                                arr_sotrudnichestvo.pop(0)
+                                count_people-=1
+
+                                print(group)
+                                print(len(group))
+                                # print(co)
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_kompromis)!=0:
+                                group.append(arr_kompromis[0])
+                                arr_kompromis.pop(0)
+                                arr_kompromis.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_izbeganie)!=0:
+                                group.append(arr_izbeganie[0])
+                                arr_izbeganie.pop(0)
+                                arr_izbeganie.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_prispososoblenie)!=0:
+                                group.append(arr_prispososoblenie[0])
+                                arr_prispososoblenie.pop(0)
+                                arr_prispososoblenie.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                        # Добавляем созданную группу в список всех групп
+                        arr_group.append(group)
+
+                        # Разумеется обнуляем контейнер
+                        group=[]
+
+                    # Если ещё есть люди на распределение
+                    if count_people>6:
+
+                        # Цикл пока есть люди для распределения
+                        while True:
+
+                            # Если в характере есть люди
+                            if len(arr_sopernichestvo)!=0:
+                                # добавление человека с максимальным баллом в группу
+                                group.append(arr_sopernichestvo[0])
+                                # Удалиение добавленного из характера
+                                arr_sopernichestvo.pop(0)
+                                arr_sopernichestvo.pop(0)
+                                # логично что на одного человека незанятого стало меньше
+                                count_people-=1
+
+                                # если группа набралась
+                                if len(group)==6:
+                                    # добавляем группу в большой список групп и обновляем её
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    # если людей для новой группы не осталось, выходим из цикла
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_sotrudnichestvo)!=0:
+                                group.append(arr_sotrudnichestvo[0])
+                                arr_sotrudnichestvo.pop(0)
+                                arr_sotrudnichestvo.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_kompromis)!=0:
+                                group.append(arr_kompromis[0])
+                                arr_kompromis.pop(0)
+                                arr_kompromis.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_izbeganie)!=0:
+                                group.append(arr_izbeganie[0])
+                                arr_izbeganie.pop(0)
+                                arr_izbeganie.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_prispososoblenie)!=0:
+                                group.append(arr_prispososoblenie[0])
+                                arr_prispososoblenie.pop(0)
+                                arr_prispososoblenie.pop(0)
+                                count_people-=1
+
+                                if len(group)==6:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<6:
+                                        break
+                
+                # набираем данные для отображения на странице
+                data=[]
+
+                # Добавление данных о созданных группах
+                for i in range(len(arr_group)):
+                    data.append('Группа №'+str(i+1))
+
+                    for j in arr_group[i]:
+                        select=User.query.filter_by(id=int(j)).first()
+                        data.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # Добавляем данные о тех, кто остался нерапспределённым
+                last=[]
+                for i in range(0, len(arr_sopernichestvo), 2):
+                    last.append(arr_sopernichestvo[i])
+
+                for i in range(0, len(arr_sotrudnichestvo), 2):
+                    last.append(arr_sotrudnichestvo[i])
+
+                for i in range(0, len(arr_kompromis), 2):
+                    last.append(arr_kompromis[i])
+
+                for i in range(0, len(arr_izbeganie), 2):
+                    last.append(arr_izbeganie[i])
+
+                for i in range(0, len(arr_prispososoblenie), 2):
+                    last.append(arr_prispososoblenie[i])
+
+                # добавление персональных данных нераспределённых
+                new_last=[]
+                for i in last:
+                    select=User.query.filter_by(id=int(i)).first()
+                    new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # теперь нужны только персональные данные
+                last=new_last
+
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                # создание страницы админа
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data=data,
+                    last=last,
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
+                    )
+
+            # Генерация групп для 7 человек
+            elif count_data=='7':
+                
+                # Собираем всех респондентов
+                arr_people=[]
+                select=User.query.filter_by(role='resp').all()
+
+                # Если запрос не пустой
+                if select!=None:
+                    for i in select:
+
+                        # проверка на удаление
+                        select=Results.query.filter_by(id_user=i.id).first()
+
+                        # если респондент не удалён
+                        if select.delete!='+':
+                            arr_people.append(i.id)
+
+                        # если респондент удалён
+                        else:
+                            pass
+
+                        # востанавливаем селект для цикла
+                        select=User.query.filter_by(role='resp').all()
+                
+                # Если запрос пустой
+                else:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов нет.',
+                        arr_haracter=arr_haracter,
+                        arr_fio=arr_fio,
+                        form_gp=form_generation_group
+                    )
+
+                # Если нет респондентов
+                if len(arr_people)<7:
+
+                    # Сбор данных для таблицы внизу админки
+                    # Тут будут айди всех нераспределённых респондентов
+                    arr_resp=[]
+                    # Здесь будут их фио
+                    arr_fio=[]
+                    # Здесь будет хранится их характер
+                    arr_haracter=[]
+
+                    # Выборка данных из бд всех не распределённых респондентов
+                    select=Results.query.filter_by(delete='-').all()
+                    # Если нераспределённые респонденты есть
+                    if select!=None:
+                        # Циклом по всем респондентам
+                        for i in select:
+                            # Собираем айди
+                            arr_resp.append(i.id_user)
+
+                    # Если нераспределённых респондентов нет
+                    else:
+                        arr_fio=['Нераспределённых респондентов нет']
+                        arr_haracter=['']
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Делаем запрос к их личным данным
+                        select=User.query.filter_by(id=i).first()
+                        # Сохраняем фио
+                        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                    # Циклом по всем
+                    for i in arr_resp:
+                        # Запрос данных о характерах
+                        select=Results.query.filter_by(id_user=i).first()
+
+                        # Вычисление процента для соперничества
+                        sop=select.count_sopernichestvo
+                        sop=for_percent*float(sop)*10
+
+                        # Вычисление процента для сотрудничества
+                        sot=select.count_sotrudnichestvo
+                        sot=for_percent*float(sot)*10
+
+                        # Вычисление процента для компромиса
+                        kom=select.count_kompromis
+                        kom=for_percent*float(kom)*10
+
+                        # Вычисление процента для избегания
+                        izb=select.count_izbeganie
+                        izb=for_percent*float(izb)*10
+
+                        # Вычисление процента для приспособления
+                        pri=select.count_prispososoblenie
+                        pri=for_percent*float(pri)*10
+
+                        # Сохраняем характеры
+                        haracter=[
+                        'Соперничество:'+str(int(sop)),
+                        'Сотрудничество:'+str(int(sot)),
+                        'Компромис:'+str(int(kom)),
+                        'Избегание:'+str(int(izb)),
+                        'Приспособление:'+str(int(pri))
+                        ]
+                        
+                        # Добавляем в огромную кучу характеров
+                        arr_haracter.append(haracter)
+
+                    # выборка данных админа
+                    select=User.query.filter_by(id=idd).first()
+
+                    return render_template('admin.html',
+                        surname=select.surname,
+                        name=select.name,
+                        middle_name=select.middle_name,
+                        data='.',
+                        last='.',
+                        Error='Респондентов меньше 7.',
+                        arr_fio=arr_fio,
+                        arr_haracter=arr_haracter,
+                        form_gp=form_generation_group
+                    )
+
+                # создание списков всех характеров
+                arr_sotrudnichestvo=[]
+                arr_sopernichestvo=[]
+                arr_izbeganie=[]
+                arr_kompromis=[]
+                arr_prispososoblenie=[]
+
+                # цикл по всем респондентам
+                for i in arr_people:
+                    
+                    # выборка результатов пользователя
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Если запрос не пустой
+                    if select!=None:
+
+                        # Если результат не удалён, то
+                        if select.delete=='-':
+
+                            # Выбор основного характера респондента и добавление его в списки характера
+                            if select.more_count=='sotrudnichestvo':
+                                arr_sotrudnichestvo.append(i)
+                                arr_sotrudnichestvo.append(select.count_sotrudnichestvo)
+
+                            elif select.more_count=='sopernichestvo':
+                                arr_sopernichestvo.append(i)
+                                arr_sopernichestvo.append(select.count_sopernichestvo)
+
+                            elif select.more_count=='kompromis':
+                                arr_kompromis.append(i)
+                                arr_kompromis.append(select.count_kompromis)
+
+                            elif select.more_count=='izbeganie':
+                                arr_izbeganie.append(i)
+                                arr_izbeganie.append(select.count_izbeganie)
+
+                            elif select.more_count=='prisposoblenie':
+                                arr_prispososoblenie.append(i)
+                                arr_prispososoblenie.append(select.count_prispososoblenie)
+
+                        # если результат удалён
+                        else:
+                            pass
+
+                    # Если запрос пустой
+                    # else:
+
+                        # выборка данных админа
+                        # select=User.query.filter_by(id=idd).first()
+
+                        # return render_template('admin.html',
+                        #     surname=select.surname,
+                        #     name=select.name,
+                        #     middle_name=select.middle_name,
+                        #     data='.',
+                        #     last='.',
+                        #     Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #003. Сообщите нам об этом пожалуйста!'
+                        # )
+
+                # сортировка характеров, что бы вначале списка был самый большой балл
+                arr_sotrudnichestvo=sorted_group(arr_sotrudnichestvo)
+                arr_sopernichestvo=sorted_group(arr_sopernichestvo)
+                arr_kompromis=sorted_group(arr_kompromis)
+                arr_izbeganie=sorted_group(arr_izbeganie)
+                arr_prispososoblenie=sorted_group(arr_prispososoblenie)
+
+                # выясняем какое минимальное число людей в характере
+                max_people=100
+                if max_people>int(len(arr_sopernichestvo)/2):
+                    if len(arr_sopernichestvo)!=0:
+
+                            max_people=int(len(arr_sopernichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_sotrudnichestvo)/2):
+                    if len(arr_sotrudnichestvo)!=0:
+
+                        max_people=int(len(arr_sotrudnichestvo)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_kompromis)/2):
+                    if len(arr_kompromis)!=0:
+
+                        max_people=int(len(arr_kompromis)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_izbeganie)/2):
+                    if len(arr_izbeganie)!=0:
+
+                        max_people=int(len(arr_izbeganie)/2)
+
+                    else:
+                        max_people=0
+                
+                if max_people>int(len(arr_prispososoblenie)/2):
+                    if len(arr_prispososoblenie)!=0:
+
+                        max_people=int(len(arr_prispososoblenie)/2)
+
+                    else:
+                        max_people=0
+
+                # начинаем создавать группы
+                arr_group=[]
+                group=[]
+                count_people=int((len(arr_sotrudnichestvo)+len(arr_sopernichestvo)+len(arr_kompromis)+len(arr_izbeganie)+len(arr_prispososoblenie))/2)
+
+                # ПОТОМ УБРАТЬ
+                # max_people=0
+
+                # Если есть характеры без людей
+                if max_people==0:
+                    
+                    # Цикл пока есть люди для распределения
+                    while True:
+
+                        # Если в характере есть люди
+                        if len(arr_sopernichestvo)!=0:
+                            # добавление человека с максимальным баллом в группу
+                            group.append(arr_sopernichestvo[0])
+                            # Удалиение добавленного из характера
+                            arr_sopernichestvo.pop(0)
+                            arr_sopernichestvo.pop(0)
+                            # логично что на одного человека незанятого стало меньше
+                            count_people-=1
+
+                            # если группа набралась
+                            if len(group)==7:
+                                # добавляем группу в большой список групп и обновляем её
+                                arr_group.append(group)
+                                group=[]
+
+                                # если людей для новой группы не осталось, выходим из цикла
+                                if count_people<7:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_sotrudnichestvo)!=0:
+                            group.append(arr_sotrudnichestvo[0])
+                            arr_sotrudnichestvo.pop(0)
+                            arr_sotrudnichestvo.pop(0)
+                            count_people-=1
+
+                            if len(group)==7:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<7:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_kompromis)!=0:
+                            group.append(arr_kompromis[0])
+                            arr_kompromis.pop(0)
+                            arr_kompromis.pop(0)
+                            count_people-=1
+
+                            if len(group)==7:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<7:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_izbeganie)!=0:
+                            group.append(arr_izbeganie[0])
+                            arr_izbeganie.pop(0)
+                            arr_izbeganie.pop(0)
+                            count_people-=1
+
+                            if len(group)==7:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<7:
+                                    break
+
+                        # Аналогично первому условию в этом цикле
+                        if len(arr_prispososoblenie)!=0:
+                            group.append(arr_prispososoblenie[0])
+                            arr_prispososoblenie.pop(0)
+                            arr_prispososoblenie.pop(0)
+                            count_people-=1
+
+                            if len(group)==7:
+                                arr_group.append(group)
+                                group=[]
+
+                                if count_people<7:
+                                    break
+                 
+                # если все характеры полные                   
+                else:
+                    
+                    # цикл пока не появятся характеры без людей
+                    # пусть будет 1 вместо макс каунта что б не полетело
+                    for i in range(1):
+
+                        # Добавляем в группу самых сильных каждого характера
+                        group.append(arr_sotrudnichestvo[0])
+                        group.append(arr_sopernichestvo[0])
+                        group.append(arr_izbeganie[0])
+                        group.append(arr_kompromis[0])
+                        group.append(arr_prispososoblenie[0])
+
+                        # Выбрасываем из рабочего списка
+                        arr_sotrudnichestvo.pop(0)
+                        arr_sotrudnichestvo.pop(0)
+                        arr_sopernichestvo.pop(0)
+                        arr_sopernichestvo.pop(0)
+                        arr_izbeganie.pop(0)
+                        arr_izbeganie.pop(0)
+                        arr_kompromis.pop(0)
+                        arr_kompromis.pop(0)
+                        arr_prispososoblenie.pop(0)
+                        arr_prispososoblenie.pop(0)
+
+                        # Раз мы добавили 5 человек, то людей на 5 меньше
+                        count_people-=5
+
+                        # Цикл пока есть люди для распределения
+                        while True:
+
+                            # Если в характере есть люди
+                            if len(arr_sopernichestvo)!=0:
+                                # добавление человека с максимальным баллом в группу
+                                group.append(arr_sopernichestvo[0])
+                                # Удалиение добавленного из характера
+                                arr_sopernichestvo.pop(0)
+                                arr_sopernichestvo.pop(0)
+                                # логично что на одного человека незанятого стало меньше
+                                count_people-=1
+
+                                # если группа набралась
+                                if len(group)==7:
+                                    # добавляем группу в большой список групп и обновляем её
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    # если людей для новой группы не осталось, выходим из цикла
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_sotrudnichestvo)!=0:
+                                group.append(arr_sotrudnichestvo[0])
+                                arr_sotrudnichestvo.pop(0)
+                                arr_sotrudnichestvo.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_kompromis)!=0:
+                                group.append(arr_kompromis[0])
+                                arr_kompromis.pop(0)
+                                arr_kompromis.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_izbeganie)!=0:
+                                group.append(arr_izbeganie[0])
+                                arr_izbeganie.pop(0)
+                                arr_izbeganie.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_prispososoblenie)!=0:
+                                group.append(arr_prispososoblenie[0])
+                                arr_prispososoblenie.pop(0)
+                                arr_prispososoblenie.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                        # Добавляем созданную группу в список всех групп
+                        arr_group.append(group)
+
+                        # Разумеется обнуляем контейнер
+                        group=[]
+
+                    # Если ещё есть люди на распределение
+                    if count_people>7:
+
+                        # Цикл пока есть люди для распределения
+                        while True:
+
+                            # Если в характере есть люди
+                            if len(arr_sopernichestvo)!=0:
+                                # добавление человека с максимальным баллом в группу
+                                group.append(arr_sopernichestvo[0])
+                                # Удалиение добавленного из характера
+                                arr_sopernichestvo.pop(0)
+                                arr_sopernichestvo.pop(0)
+                                # логично что на одного человека незанятого стало меньше
+                                count_people-=1
+
+                                # если группа набралась
+                                if len(group)==7:
+                                    # добавляем группу в большой список групп и обновляем её
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    # если людей для новой группы не осталось, выходим из цикла
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_sotrudnichestvo)!=0:
+                                group.append(arr_sotrudnichestvo[0])
+                                arr_sotrudnichestvo.pop(0)
+                                arr_sotrudnichestvo.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_kompromis)!=0:
+                                group.append(arr_kompromis[0])
+                                arr_kompromis.pop(0)
+                                arr_kompromis.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_izbeganie)!=0:
+                                group.append(arr_izbeganie[0])
+                                arr_izbeganie.pop(0)
+                                arr_izbeganie.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+
+                            # Аналогично первому условию в этом цикле
+                            if len(arr_prispososoblenie)!=0:
+                                group.append(arr_prispososoblenie[0])
+                                arr_prispososoblenie.pop(0)
+                                arr_prispososoblenie.pop(0)
+                                count_people-=1
+
+                                if len(group)==7:
+                                    arr_group.append(group)
+                                    group=[]
+
+                                    if count_people<7:
+                                        break
+                
+                # набираем данные для отображения на странице
+                data=[]
+
+                # Добавление данных о созданных группах
+                for i in range(len(arr_group)):
+                    data.append('Группа №'+str(i+1))
+
+                    for j in arr_group[i]:
+                        select=User.query.filter_by(id=int(j)).first()
+                        data.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # Добавляем данные о тех, кто остался нерапспределённым
+                last=[]
+                for i in range(0, len(arr_sopernichestvo), 2):
+                    last.append(arr_sopernichestvo[i])
+
+                for i in range(0, len(arr_sotrudnichestvo), 2):
+                    last.append(arr_sotrudnichestvo[i])
+
+                for i in range(0, len(arr_kompromis), 2):
+                    last.append(arr_kompromis[i])
+
+                for i in range(0, len(arr_izbeganie), 2):
+                    last.append(arr_izbeganie[i])
+
+                for i in range(0, len(arr_prispososoblenie), 2):
+                    last.append(arr_prispososoblenie[i])
+
+                # добавление персональных данных нераспределённых
+                new_last=[]
+                for i in last:
+                    select=User.query.filter_by(id=int(i)).first()
+                    new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
+
+                # теперь нужны только персональные данные
+                last=new_last
+
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                # создание страницы админа
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data=data,
+                    last=last,
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
+                    )
+
+            # Такое просто невозможно но мало ли
             else:
-                # цикл пока не появятся характеры без людей
-                for i in range(max_people):
-                    pass
-            
-            # набираем данные для отображения на странице
-            data=[]
 
-            # Добавление данных о созданных группах
-            for i in range(len(arr_group)):
-                data.append('Группа №'+str(i+1))
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
 
-                for j in arr_group[i]:
-                    select=User.query.filter_by(id=int(j)).first()
-                    data.append(select.surname+' '+select.name+' Психотип: '+select.result)
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
 
-            # Добавляем данные о тех, кто остался нерапспределённым
-            last=[]
-            for i in range(0, len(arr_sopernichestvo), 2):
-                last.append(arr_sopernichestvo[i])
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
 
-            for i in range(0, len(arr_sotrudnichestvo), 2):
-                last.append(arr_sotrudnichestvo[i])
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
 
-            for i in range(0, len(arr_kompromis), 2):
-                last.append(arr_kompromis[i])
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
 
-            for i in range(0, len(arr_izbeganie), 2):
-                last.append(arr_izbeganie[i])
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
 
-            for i in range(0, len(arr_prispososoblenie), 2):
-                last.append(arr_prispososoblenie[i])
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
 
-            # добавление персональных данных нераспределённых
-            new_last=[]
-            for i in last:
-                select=User.query.filter_by(id=int(i)).first()
-                new_last.append(select.surname+' '+select.name+' Психотип: '+select.result)
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
 
-            # теперь нужны только персональные данные
-            last=new_last
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
 
-            # выборка данных админа
-            select=User.query.filter_by(id=idd).first()
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
 
-            # создание страницы админа
-            return render_template('admin.html',
-                surname=select.surname,
-                name=select.name,
-                middle_name=select.middle_name,
-                data=data,
-                last=last
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+                
+                # выборка данных админа
+                select=User.query.filter_by(id=idd).first()
+
+                return render_template('admin.html',
+                    surname=select.surname,
+                    name=select.name,
+                    middle_name=select.middle_name,
+                    data='.',
+                    last='.',
+                    Error='Неизвестная ошибка! Этого просто не может быть! Код ошибки #006. Сообщите нам об этом пожалуйста!',
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
                 )
 
         # если нужно сохранить все сгенерированные группы
@@ -1198,6 +4482,72 @@ def admin():
             # Если запрос пустой
             else:
 
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
                 # выборка данных админа
                 select=User.query.filter_by(id=idd).first()
 
@@ -1207,12 +4557,81 @@ def admin():
                     middle_name=select.middle_name,
                     data='.',
                     last='.',
-                    Error='Респондентов нет.'
+                    Error='Респондентов нет.',
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
                 )
 
             # Если нет респондентов
             if len(arr_people)<5:
 
+                # Сбор данных для таблицы внизу админки
+                # Тут будут айди всех нераспределённых респондентов
+                arr_resp=[]
+                # Здесь будут их фио
+                arr_fio=[]
+                # Здесь будет хранится их характер
+                arr_haracter=[]
+
+                # Выборка данных из бд всех не распределённых респондентов
+                select=Results.query.filter_by(delete='-').all()
+                # Если нераспределённые респонденты есть
+                if select!=None:
+                    # Циклом по всем респондентам
+                    for i in select:
+                        # Собираем айди
+                        arr_resp.append(i.id_user)
+
+                # Если нераспределённых респондентов нет
+                else:
+                    arr_fio=['Нераспределённых респондентов нет']
+                    arr_haracter=['']
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Делаем запрос к их личным данным
+                    select=User.query.filter_by(id=i).first()
+                    # Сохраняем фио
+                    arr_fio.append(str(select.surname)+' '+str(select.name))
+
+                # Циклом по всем
+                for i in arr_resp:
+                    # Запрос данных о характерах
+                    select=Results.query.filter_by(id_user=i).first()
+
+                    # Вычисление процента для соперничества
+                    sop=select.count_sopernichestvo
+                    sop=for_percent*float(sop)*10
+
+                    # Вычисление процента для сотрудничества
+                    sot=select.count_sotrudnichestvo
+                    sot=for_percent*float(sot)*10
+
+                    # Вычисление процента для компромиса
+                    kom=select.count_kompromis
+                    kom=for_percent*float(kom)*10
+
+                    # Вычисление процента для избегания
+                    izb=select.count_izbeganie
+                    izb=for_percent*float(izb)*10
+
+                    # Вычисление процента для приспособления
+                    pri=select.count_prispososoblenie
+                    pri=for_percent*float(pri)*10
+
+                    # Сохраняем характеры
+                    haracter=[
+                    'Соперничество:'+str(int(sop)),
+                    'Сотрудничество:'+str(int(sot)),
+                    'Компромис:'+str(int(kom)),
+                    'Избегание:'+str(int(izb)),
+                    'Приспособление:'+str(int(pri))
+                    ]
+                    
+                    # Добавляем в огромную кучу характеров
+                    arr_haracter.append(haracter)
+
                 # выборка данных админа
                 select=User.query.filter_by(id=idd).first()
 
@@ -1222,7 +4641,10 @@ def admin():
                     middle_name=select.middle_name,
                     data='.',
                     last='.',
-                    Error='Респондентов меньше 5.'
+                    Error='Респондентов меньше 5.',
+                    arr_fio=arr_fio,
+                    arr_haracter=arr_haracter,
+                    form_gp=form_generation_group
                 )
 
             # создание списков всех характеров
@@ -1445,6 +4867,72 @@ def admin():
                     db.session.query(Results).filter_by(id_user=i[j]).update({'delete':'+'})
                     db.session.commit()
 
+            # Сбор данных для таблицы внизу админки
+            # Тут будут айди всех нераспределённых респондентов
+            arr_resp=[]
+            # Здесь будут их фио
+            arr_fio=[]
+            # Здесь будет хранится их характер
+            arr_haracter=[]
+
+            # Выборка данных из бд всех не распределённых респондентов
+            select=Results.query.filter_by(delete='-').all()
+            # Если нераспределённые респонденты есть
+            if select!=None:
+                # Циклом по всем респондентам
+                for i in select:
+                    # Собираем айди
+                    arr_resp.append(i.id_user)
+
+            # Если нераспределённых респондентов нет
+            else:
+                arr_fio=['Нераспределённых респондентов нет']
+                arr_haracter=['']
+
+            # Циклом по всем
+            for i in arr_resp:
+                # Делаем запрос к их личным данным
+                select=User.query.filter_by(id=i).first()
+                # Сохраняем фио
+                arr_fio.append(str(select.surname)+' '+str(select.name))
+
+            # Циклом по всем
+            for i in arr_resp:
+                # Запрос данных о характерах
+                select=Results.query.filter_by(id_user=i).first()
+
+                # Вычисление процента для соперничества
+                sop=select.count_sopernichestvo
+                sop=for_percent*float(sop)*10
+
+                # Вычисление процента для сотрудничества
+                sot=select.count_sotrudnichestvo
+                sot=for_percent*float(sot)*10
+
+                # Вычисление процента для компромиса
+                kom=select.count_kompromis
+                kom=for_percent*float(kom)*10
+
+                # Вычисление процента для избегания
+                izb=select.count_izbeganie
+                izb=for_percent*float(izb)*10
+
+                # Вычисление процента для приспособления
+                pri=select.count_prispososoblenie
+                pri=for_percent*float(pri)*10
+
+                # Сохраняем характеры
+                haracter=[
+                'Соперничество:'+str(int(sop)),
+                'Сотрудничество:'+str(int(sot)),
+                'Компромис:'+str(int(kom)),
+                'Избегание:'+str(int(izb)),
+                'Приспособление:'+str(int(pri))
+                ]
+                
+                # Добавляем в огромную кучу характеров
+                arr_haracter.append(haracter)
+
             # выборка данных админа
             select=User.query.filter_by(id=idd).first()
 
@@ -1453,12 +4941,81 @@ def admin():
                 surname=select.surname,
                 name=select.name,
                 middle_name=select.middle_name,
-                masage='Группы сгенирированны'
+                masage='Группы сгенирированны',
+                arr_fio=arr_fio,
+                arr_haracter=arr_haracter,
+                form_gp=form_generation_group
                 )
 
         # 
         else:
             pass
+
+    # Сбор данных для таблицы внизу админки
+    # Тут будут айди всех нераспределённых респондентов
+    arr_resp=[]
+    # Здесь будут их фио
+    arr_fio=[]
+    # Здесь будет хранится их характер
+    arr_haracter=[]
+
+    # Выборка данных из бд всех не распределённых респондентов
+    select=Results.query.filter_by(delete='-').all()
+    # Если нераспределённые респонденты есть
+    if select!=None:
+        # Циклом по всем респондентам
+        for i in select:
+            # Собираем айди
+            arr_resp.append(i.id_user)
+
+    # Если нераспределённых респондентов нет
+    else:
+        arr_fio=['Нераспределённых респондентов нет']
+        arr_haracter=['']
+
+    # Циклом по всем
+    for i in arr_resp:
+        # Делаем запрос к их личным данным
+        select=User.query.filter_by(id=i).first()
+        # Сохраняем фио
+        arr_fio.append(str(select.surname)+' '+str(select.name))
+
+    # Циклом по всем
+    for i in arr_resp:
+        # Запрос данных о характерах
+        select=Results.query.filter_by(id_user=i).first()
+
+        # Вычисление процента для соперничества
+        sop=select.count_sopernichestvo
+        sop=for_percent*float(sop)*10
+
+        # Вычисление процента для сотрудничества
+        sot=select.count_sotrudnichestvo
+        sot=for_percent*float(sot)*10
+
+        # Вычисление процента для компромиса
+        kom=select.count_kompromis
+        kom=for_percent*float(kom)*10
+
+        # Вычисление процента для избегания
+        izb=select.count_izbeganie
+        izb=for_percent*float(izb)*10
+
+        # Вычисление процента для приспособления
+        pri=select.count_prispososoblenie
+        pri=for_percent*float(pri)*10
+
+        # Сохраняем характеры
+        haracter=[
+        'Соперничество:'+str(int(sop)),
+        'Сотрудничество:'+str(int(sot)),
+        'Компромис:'+str(int(kom)),
+        'Избегание:'+str(int(izb)),
+        'Приспособление:'+str(int(pri))
+        ]
+        
+        # Добавляем в огромную кучу характеров
+        arr_haracter.append(haracter)
 
     # Выбор данных админа из бд
     select=User.query.filter_by(id=idd).first()
@@ -1469,7 +5026,10 @@ def admin():
         name=select.name,
         middle_name=select.middle_name,
         data='.',
-        last='.'
+        last='.',
+        arr_fio=arr_fio,
+        arr_haracter=arr_haracter,
+        form_gp=form_generation_group
         )
 
 # Возвращает страницу для создания групп вручную
@@ -1490,7 +5050,7 @@ def group_create():
         # Делаем его выборку данных из бд
         select=User.query.filter_by(id=id_resp).first()
         # Записываем его данные
-        arr_free_resp.append(str(select.id)+' | '+select.surname+' '+select.name+' Характер:'+select.result)
+        arr_free_resp.append(str(select.id)+' | '+select.surname+' '+select.name+'  Характер: '+select.result)
         # откатываем запрос данных
         select=Results.query.filter_by(delete='-').all()
 
@@ -1506,93 +5066,753 @@ def group_create():
         person_3=form_group_create.person_3.data
         person_4=form_group_create.person_4.data
         person_5=form_group_create.person_5.data
+        person_6=form_group_create.person_6.data
+        person_7=form_group_create.person_7.data
+        change=form_group_create.count.data
 
-        # Проверка на заполненность форм
-        if len(person_1)==0 or len(person_2)==0 or len(person_3)==0 or len(person_4)==0 or len(person_5)==0:
-
-            # вывод ошибки
-            return render_template('group_create.html',
-                form=form_group_create,
-                arr_free_resp=arr_free_resp,
-                Error='Одно из полей незаполненно!'
-                )
-
-        # Если все данные заполненны
-        else:
+        # Создание групп на трёх человек
+        if change=='3':
             
-            # Проверка на существование пользователя
-            select=Results.query.filter_by(id_user=person_1).first()
-            if select==None:
+            # Проверка на заполненность форм
+            if len(person_1)==0 or len(person_2)==0 or len(person_3)==0:
+
+                # вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Одно из полей незаполненно!'
+                    )
+
+            # Проверка на ввод одного и того же человека два или более раз
+            # Создаём место для сравнения сразу же с первым человеком
+            bucket=[person_1]
+
+            # Проверяем, второй равен ли первому?
+            if person_2 in bucket:
                 
                 # Вывод ошибки
                 return render_template('group_create.html',
                     form=form_group_create,
                     arr_free_resp=arr_free_resp,
-                    Error='Поле 1: Такого пользователя не существует'
+                    Error='Один и тот же человек указан дважды!'
                     )
 
-            # Проверка на существование пользователя
-            select=Results.query.filter_by(id_user=person_2).first()
-            if select==None:
+            # Если нет то добовляем второго в массив для сравнения
+            else:
+                bucket.append(person_2)
+
+            # Проверяем, третий равен 1 или 2?
+            if person_3 in bucket:
                 
                 # Вывод ошибки
                 return render_template('group_create.html',
                     form=form_group_create,
                     arr_free_resp=arr_free_resp,
-                    Error='Поле 2: Такого пользователя не существует'
+                    Error='Один и тот же человек указан дважды!'
                     )
 
-            # Проверка на существование пользователя
-            select=Results.query.filter_by(id_user=person_3).first()
-            if select==None:
+            # Если все данные заполненны корректно
+            else:
+                
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_1).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 1: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_2).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 2: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_3).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 3: Такого пользователя не существует'
+                        )
+
+                # Если мы дошли до сюда то всё хорошо и можно создавать группу
+                G=Group(person_1=person_1, person_2=person_2, person_3=person_3)
+                db.session.add(G)
+                db.session.commit()
+
+                # Теперь делаем отметку что они распределены
+                db.session.query(Results).filter_by(id_user=person_1).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_2).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_3).update({'delete':'+'})
+                db.session.commit()
+
+                # Рендер страницы
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    masage='Группа создана'
+                    )
+
+        # Создание групп на четырёх человек
+        elif change=='4':
+            
+            # Проверка на заполненность форм
+            if len(person_1)==0 or len(person_2)==0 or len(person_3)==0 or len(person_4)==0:
+
+                # вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Одно из полей незаполненно!'
+                    )
+
+            # Проверка на ввод одного и того же человека два или более раз
+            # Создаём место для сравнения сразу же с первым человеком
+            bucket=[person_1]
+
+            # Проверяем, второй равен ли первому?
+            if person_2 in bucket:
                 
                 # Вывод ошибки
                 return render_template('group_create.html',
                     form=form_group_create,
                     arr_free_resp=arr_free_resp,
-                    Error='Поле 3: Такого пользователя не существует'
+                    Error='Один и тот же человек указан дважды!'
                     )
 
-            # Проверка на существование пользователя
-            select=Results.query.filter_by(id_user=person_4).first()
-            if select==None:
+            # Если нет то добовляем второго в массив для сравнения
+            else:
+                bucket.append(person_2)
+
+            # Проверяем, третий равен 1 или 2?
+            if person_3 in bucket:
                 
                 # Вывод ошибки
                 return render_template('group_create.html',
                     form=form_group_create,
                     arr_free_resp=arr_free_resp,
-                    Error='Поле 4: Такого пользователя не существует'
+                    Error='Один и тот же человек указан дважды!'
                     )
 
-            # Проверка на существование пользователя
-            select=Results.query.filter_by(id_user=person_5).first()
-            if select==None:
+            # Если нет то добавляем его в сравнение
+            else:
+                bucket.append(person_3)
+
+            # 4 это 3 или 2 или 1?
+            if person_4 in bucket:
                 
                 # Вывод ошибки
                 return render_template('group_create.html',
                     form=form_group_create,
                     arr_free_resp=arr_free_resp,
-                    Error='Поле 5: Такого пользователя не существует'
+                    Error='Один и тот же человек указан дважды!'
                     )
 
-            # Если мы дошли до сюда то всё хорошо и можно создавать группу
-            G=Group(person_1=person_1, person_2=person_2, person_3=person_3, person_4=person_4, person_5=person_5)
-            db.session.add(G)
-            db.session.commit()
+            # Если все данные заполненны корректно
+            else:
+                
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_1).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 1: Такого пользователя не существует'
+                        )
 
-            # Теперь делаем отметку что они распределены
-            db.session.query(Results).filter_by(id_user=person_1).update({'delete':'+'})
-            db.session.query(Results).filter_by(id_user=person_2).update({'delete':'+'})
-            db.session.query(Results).filter_by(id_user=person_3).update({'delete':'+'})
-            db.session.query(Results).filter_by(id_user=person_4).update({'delete':'+'})
-            db.session.query(Results).filter_by(id_user=person_5).update({'delete':'+'})
-            db.session.commit()
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_2).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 2: Такого пользователя не существует'
+                        )
 
-            # Рендер страницы
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_3).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 3: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_4).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 4: Такого пользователя не существует'
+                        )
+
+                # Если мы дошли до сюда то всё хорошо и можно создавать группу
+                G=Group(person_1=person_1, person_2=person_2, person_3=person_3, person_4=person_4)
+                db.session.add(G)
+                db.session.commit()
+
+                # Теперь делаем отметку что они распределены
+                db.session.query(Results).filter_by(id_user=person_1).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_2).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_3).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_4).update({'delete':'+'})
+                db.session.commit()
+
+                # Рендер страницы
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    masage='Группа создана'
+                    )
+
+        # Механизм создания группы на 5 человек
+        elif change=='5':
+
+            # Проверка на заполненность форм
+            if len(person_1)==0 or len(person_2)==0 or len(person_3)==0 or len(person_4)==0 or len(person_5)==0:
+
+                # вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Одно из полей незаполненно!'
+                    )
+
+            # Проверка на ввод одного и того же человека два или более раз
+            # Создаём место для сравнения сразу же с первым человеком
+            bucket=[person_1]
+
+            # Проверяем, второй равен ли первому?
+            if person_2 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет то добовляем второго в массив для сравнения
+            else:
+                bucket.append(person_2)
+
+            # Проверяем, третий равен 1 или 2?
+            if person_3 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет то добавляем его в сравнение
+            else:
+                bucket.append(person_3)
+
+            # 4 это 3 или 2 или 1?
+            if person_4 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет, то его тоже в сравнение
+            else:
+                bucket.append(person_4)
+
+            # 5 это 4, 3, 2, 1?
+            if person_5 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если все данные заполненны корректно
+            else:
+                
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_1).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 1: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_2).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 2: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_3).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 3: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_4).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 4: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_5).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 5: Такого пользователя не существует'
+                        )
+
+                # Если мы дошли до сюда то всё хорошо и можно создавать группу
+                G=Group(person_1=person_1, person_2=person_2, person_3=person_3, person_4=person_4, person_5=person_5)
+                db.session.add(G)
+                db.session.commit()
+
+                # Теперь делаем отметку что они распределены
+                db.session.query(Results).filter_by(id_user=person_1).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_2).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_3).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_4).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_5).update({'delete':'+'})
+                db.session.commit()
+
+                # Рендер страницы
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    masage='Группа создана'
+                    )
+
+        # Создание групп на шестерых человек
+        elif change=='6':
+            
+            # Проверка на заполненность форм
+            if len(person_1)==0 or len(person_2)==0 or len(person_3)==0 or len(person_4)==0 or len(person_5)==0 or len(person_6)==0:
+
+                # вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Одно из полей незаполненно!'
+                    )
+
+            # Проверка на ввод одного и того же человека два или более раз
+            # Создаём место для сравнения сразу же с первым человеком
+            bucket=[person_1]
+
+            # Проверяем, второй равен ли первому?
+            if person_2 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет то добовляем второго в массив для сравнения
+            else:
+                bucket.append(person_2)
+
+            # Проверяем, третий равен 1 или 2?
+            if person_3 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет то добавляем его в сравнение
+            else:
+                bucket.append(person_3)
+
+            # 4 это 3 или 2 или 1?
+            if person_4 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет, то его тоже в сравнение
+            else:
+                bucket.append(person_4)
+
+            # 5 это 4, 3, 2, 1?
+            if person_5 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет, то его тоже в сравнение
+            else:
+                bucket.append(person_5)
+
+            # 6 это 5, 4, 3, 2, 1?
+            if person_6 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если все данные заполненны корректно
+            else:
+                
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_1).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 1: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_2).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 2: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_3).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 3: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_4).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 4: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_5).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 5: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_6).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 6: Такого пользователя не существует'
+                        )
+
+                # Если мы дошли до сюда то всё хорошо и можно создавать группу
+                G=Group(person_1=person_1, person_2=person_2, person_3=person_3, person_4=person_4, person_5=person_5, person_6=person_6)
+                db.session.add(G)
+                db.session.commit()
+
+                # Теперь делаем отметку что они распределены
+                db.session.query(Results).filter_by(id_user=person_1).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_2).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_3).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_4).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_5).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_6).update({'delete':'+'})
+                db.session.commit()
+
+                # Рендер страницы
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    masage='Группа создана'
+                    )
+
+        # Создание групп на семерых человек
+        elif change=='7':
+            
+            # Проверка на заполненность форм
+            if len(person_1)==0 or len(person_2)==0 or len(person_3)==0 or len(person_4)==0 or len(person_5)==0 or len(person_6)==0 or len(person_7)==0:
+
+                # вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Одно из полей незаполненно!'
+                    )
+
+            # Проверка на ввод одного и того же человека два или более раз
+            # Создаём место для сравнения сразу же с первым человеком
+            bucket=[person_1]
+
+            # Проверяем, второй равен ли первому?
+            if person_2 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет то добовляем второго в массив для сравнения
+            else:
+                bucket.append(person_2)
+
+            # Проверяем, третий равен 1 или 2?
+            if person_3 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет то добавляем его в сравнение
+            else:
+                bucket.append(person_3)
+
+            # 4 это 3 или 2 или 1?
+            if person_4 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет, то его тоже в сравнение
+            else:
+                bucket.append(person_4)
+
+            # 5 это 4, 3, 2, 1?
+            if person_5 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет, то его тоже в сравнение
+            else:
+                bucket.append(person_5)
+
+            # 6 это 5, 4, 3, 2, 1?
+            if person_6 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если нет, то его тоже в сравнение
+            else:
+                bucket.append(person_6)
+
+            # 7 это 6, 5, 4, 3, 2, 1?
+            if person_7 in bucket:
+                
+                # Вывод ошибки
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    Error='Один и тот же человек указан дважды!'
+                    )
+
+            # Если все данные заполненны корректно
+            else:
+                
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_1).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 1: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_2).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 2: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_3).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 3: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_4).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 4: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_5).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 5: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_6).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 6: Такого пользователя не существует'
+                        )
+
+                # Проверка на существование пользователя
+                select=Results.query.filter_by(id_user=person_7).first()
+                if select==None:
+                    
+                    # Вывод ошибки
+                    return render_template('group_create.html',
+                        form=form_group_create,
+                        arr_free_resp=arr_free_resp,
+                        Error='Поле 7: Такого пользователя не существует'
+                        )
+
+                # Если мы дошли до сюда то всё хорошо и можно создавать группу
+                G=Group(person_1=person_1, person_2=person_2, person_3=person_3, person_4=person_4, person_5=person_5, person_6=person_6, person_7=person_7)
+                db.session.add(G)
+                db.session.commit()
+
+                # Теперь делаем отметку что они распределены
+                db.session.query(Results).filter_by(id_user=person_1).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_2).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_3).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_4).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_5).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_6).update({'delete':'+'})
+                db.session.query(Results).filter_by(id_user=person_7).update({'delete':'+'})
+                db.session.commit()
+
+                # Рендер страницы
+                return render_template('group_create.html',
+                    form=form_group_create,
+                    arr_free_resp=arr_free_resp,
+                    masage='Группа создана'
+                    )
+
+        # Если количество человек не выбрано
+        else:
+
+            # Вывод ошибки
             return render_template('group_create.html',
                 form=form_group_create,
                 arr_free_resp=arr_free_resp,
-                masage='Группа создана'
+                Error='Количество человек для формирования групп не выбрано'
                 )
 
     # Рендер страницы
@@ -1638,11 +5858,23 @@ def look_at_group():
 
         id_resp=i.person_4
         select=User.query.filter_by(id=id_resp).first()
-        arr_group.append(select.surname+' '+select.name+' Характер:'+select.result)
+        if select!=None:
+            arr_group.append(select.surname+' '+select.name+' Характер:'+select.result)
 
         id_resp=i.person_5
         select=User.query.filter_by(id=id_resp).first()
-        arr_group.append(select.surname+' '+select.name+' Характер:'+select.result)
+        if select!=None:
+            arr_group.append(select.surname+' '+select.name+' Характер:'+select.result)
+
+        id_resp=i.person_6
+        select=User.query.filter_by(id=id_resp).first()
+        if select!=None:
+            arr_group.append(select.surname+' '+select.name+' Характер:'+select.result)
+
+        id_resp=i.person_7
+        select=User.query.filter_by(id=id_resp).first()
+        if select!=None:
+            arr_group.append(select.surname+' '+select.name+' Характер:'+select.result)
 
         # Прибовляем каунт для следующей группы
         count+=1
@@ -1739,8 +5971,6 @@ def statistic():
     for i in range(49, len(file)-14):
         script_1+=file[i]
 
-
-
     # Создание графика о дате прохождения тэста по дням
     # Объявление переменных
     arr_days=[]
@@ -1808,8 +6038,6 @@ def statistic():
     for i in range(49, len(file)-14):
         script_2+=file[i]
 
-
-
     # Создание графика о том сколько времени на тэст тратит тот или иной характер
     sopernichestvo_time=0
     sotrudnichestvo_time=0
@@ -1868,8 +6096,6 @@ def statistic():
     izbeganie_time=round(izbeganie_time)
     prisposoblenie_time=round(prisposoblenie_time)
 
-    # print([sopernichestvo_time, kompromis_time, izbeganie_time, sotrudnichestvo_time, prisposoblenie_time])
-
     # Создание графика
     trace=go.Bar(x=['Соперничество', 'Компромис', 'Избегание', 'Сотрудничество', 'Приспособление'], y=[sopernichestvo_time, kompromis_time, izbeganie_time, sotrudnichestvo_time, prisposoblenie_time])
     data=[trace]
@@ -1894,7 +6120,6 @@ def statistic():
     # Проходимся по всему файлу и удаляем начальные тэги и финальные
     for i in range(49, len(file)-14):
         script_3+=file[i]
-
 
     # Создание страницы
     # Начало страницы до парада граффиков
