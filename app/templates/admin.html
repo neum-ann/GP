@@ -21,6 +21,9 @@
 	
 	<form method='post' name='reg'>
 		<input type='submit' value='Показать генерацию групп' name='generation'>
+		<div class='test'>
+			{{ form_gp.count }}
+		</div>
 		<input type='submit' value='Сгенерировать и сохранить все группы' name='save_all'>
 		<input type='submit' value='Удалить рандомные результаты' name='delete_radnom_pidorov'>
 	</form>
@@ -90,6 +93,55 @@
 			</tr>
 		</table>
 	</div>
+
+	<p>Респонденты сейчас:</p>
+	<table>
+		<tr>
+			<td>
+				ФИО
+			</td>
+			<td>
+				Характер
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class='special_height'>
+					<table>
+							{% for i in arr_fio %}
+							<tr>
+								<td>
+									{{ i }}
+								</td>
+							</tr>
+							{% endfor %}
+					</table>
+				</div>
+			</td>
+			<td>
+				<div class='zero_height'>
+					<table>
+							{% for i in arr_haracter %}
+							<tr>
+								<td>
+									<table>
+										{% for j in i %}
+											<tr>
+												<td>
+													{{ j }}%
+												</td>
+											</tr>
+										{% endfor %}
+									</table>
+								</td>
+							</tr>
+							{% endfor %}
+					</table>
+				</div>
+			</td>
+		</tr>
+
+	</table>
 
 	<div class="subscribe__button-back">
         <a href="http://localhost:5000/main">

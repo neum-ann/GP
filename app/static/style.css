@@ -188,3 +188,5 @@ div.msf_vik ol li{padding-left: 5px; padding-top: 5px;}
 .special_ul{list-style-type: none;}
 .error{color: red; text-transform: uppercase; font-size: 22px; margin-bottom: 20px; text-align: center; font-weight: 800;}
 div.zero_height td{height: 0px;}
+div.special_height td{height: 129px;}
+div.test ul{list-style-type: none;}

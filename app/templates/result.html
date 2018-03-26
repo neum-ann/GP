@@ -20,6 +20,23 @@
         <div class='msf_vik'>
             <p>Ваш результат.</p>
             <p>{{ txt_result }}</p>
+            {% if txt_result=="Соперничество" %}
+                <img src="{{ url_for('static', filename='sopernichestvo.png') }}">
+            {% else %}
+                {% if txt_result=="Приспособление" %}
+                    <img src="{{ url_for('static', filename='prisposoblenie.png') }}">
+                {% else %}
+                    {% if txt_result=="Избегание" %}
+                        <img src="{{ url_for('static', filename='izbeganie.png') }}">
+                    {% else %}
+                        {% if txt_result=="Компромис" %}
+                            <img src="{{ url_for('static', filename='kompromis.png') }}">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='sotrudnechistvo.png') }}">
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
             <p>За подробностями обращайтесь к педагогу. Спасибо!</p>
         </div>
     </div>

@@ -30,10 +30,10 @@
 					Нераспределённых респонденты:
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<table>
-						<form method='post' name='reg'>
+			<form method='post' name='reg'>
+				<tr>
+					<td>
+						<table>
 							<tr>
 								<td>
 									1. {{ form.person_1 }}
@@ -61,24 +61,37 @@
 							</tr>
 							<tr>
 								<td>
-									<input type='submit' value='Создать'>
+									6. {{ form.person_6 }}
 								</td>
 							</tr>
-						</form>
-					</table>
-				</td>
-				<td>
-					<table>
-						{% for i in arr_free_resp %}
 							<tr>
 								<td>
-									{{ i }}
+									7. {{ form.person_7 }}
 								</td>
 							</tr>
-						{% endfor %}
-					</table>
-				</td>
-			</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							{% for i in arr_free_resp %}
+								<tr>
+									<td>
+										{{ i }}
+									</td>
+								</tr>
+							{% endfor %}
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class='test'>
+							{{ form.count }}
+							<input type='submit' value='Создать'>
+						</div>
+					</td>
+				</tr>
+			</form>
 		</table>
 	</div>
 
